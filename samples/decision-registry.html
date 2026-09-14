@@ -61,6 +61,14 @@
   .dcard dd{margin:4px 0 0; color:var(--ink-soft); font-size:.88rem;}
   .dcard ul.opts{margin:4px 0 0; padding-left:18px; color:var(--ink-soft); font-size:.88rem;}
   .dcard ul.opts li{margin-bottom:4px;}
+  .brief-head{display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:10px; margin-bottom:2px;}
+  .brief-id{font-family:"IBM Plex Mono",monospace; font-size:.7rem; color:var(--brass-strong);}
+  .brief-sub{font-family:"IBM Plex Mono",monospace; font-size:.68rem; color:var(--ink-soft); margin:2px 0 14px;}
+  table.opt-table{width:100%; border-collapse:collapse; font-size:.82rem; margin:6px 0 4px;}
+  table.opt-table th{text-align:left; font-family:"IBM Plex Mono",monospace; font-size:.62rem; text-transform:uppercase; letter-spacing:.03em; color:var(--ink-soft); background:var(--paper-raised); padding:6px 9px; border:1px solid var(--paper-line);}
+  table.opt-table td{padding:6px 9px; border:1px solid var(--paper-line); color:var(--ink-soft); vertical-align:top;}
+  td.chosen{position:relative;}
+  td.chosen::before{content:"Selected"; display:block; font-family:"IBM Plex Mono",monospace; font-size:.58rem; text-transform:uppercase; letter-spacing:.03em; color:var(--brass-strong); margin-bottom:2px;}
 </style>
 </head>
 <body>
@@ -95,8 +103,8 @@
       <tr><td>DR-044</td><td>Add a phonetic-name field to the Person record, for use in commencement, ID printing, and LMS name-pronunciation features</td><td>Registrar / IR Lead</td><td><span class="pill pill-ok">Approved</span></td></tr>
     </table>
 
-    <h2 class="sec">Decision Detail · Sample Write-Ups</h2>
-    <p class="doc-p">Three entries from the log above, expanded to show the full write-up: context, options weighed, the decision, and the reasoning behind it. Toggle between them.</p>
+    <h2 class="sec">Decision Detail · Sample Briefing Docs</h2>
+    <p class="doc-p">Three entries from the log above, expanded into the full briefing-doc format used to bring a decision to the Steering Committee: problem statement, current state, options considered with trade-offs, and the recommendation and rationale behind what was chosen. Toggle between them.</p>
 
     <div class="dtabs">
       <button class="dtab active" data-tab="phonetic" type="button">Phonetic Name Storage</button>
@@ -105,54 +113,78 @@
     </div>
 
     <div class="dcard active" id="dcard-phonetic">
-      <h4>Add a Phonetic Name field to the Person record</h4>
-      <div class="dmeta">DR-044 &nbsp;·&nbsp; Approved &nbsp;·&nbsp; Registrar / IR Lead &nbsp;·&nbsp; June 2026</div>
-      <dt>Context</dt>
-      <dd>Commencement announcers, ID-card printing, and the LMS's name-pronunciation feature each needed a reliable phonetic spelling for a student's name, and three different offices were maintaining their own separate lists with no shared source of truth.</dd>
-      <dt>Options considered</dt>
-      <ul class="opts">
-        <li>Leave it to each office to keep its own free-text note.</li>
-        <li>Add a single Phonetic Name field to the core Person record, student-editable through self-service.</li>
-        <li>Adopt a third-party name-pronunciation add-on tool layered on top of the SIS.</li>
-      </ul>
-      <dt>Decision</dt>
-      <dd>Add a single Phonetic Name field to the core Person record in Colleague, surfaced to commencement, ID printing, and the LMS.</dd>
+      <div class="brief-head">
+        <h4>DR-044 &mdash; Phonetic Name / Preferred Pronunciation Storage</h4>
+        <span class="pill pill-ok">Approved</span>
+      </div>
+      <div class="brief-sub">Roselawn University SIS Modernization Project &nbsp;|&nbsp; Decision Registry Briefing Doc &nbsp;|&nbsp; June 2026</div>
+      <dt>Problem Statement</dt>
+      <dd>Commencement announcers, ID-card printing, and the LMS's name-pronunciation feature each need a reliable phonetic spelling or pronunciation guide for a student's name. No single field exists for it today.</dd>
+      <dt>Current State</dt>
+      <dd>Roselawn already collects this informally in at least three places: a commencement-only spreadsheet rebuilt every spring, a free-text note some advisors add to their own files, and a one-off field some faculty maintain in the LMS roster. None of the three sync with each other, and none are visible to Registrar or IT staff outside the office that built them.</dd>
+      <dt>Options Considered</dt>
+      <table class="opt-table">
+        <tr><th>Option</th><th>Trade-off</th></tr>
+        <tr><td class="chosen">Add one Phonetic Name field to the core Person record, student-editable through self-service</td><td>Single source of truth feeding every downstream use; requires a schema change and a self-service form update</td></tr>
+        <tr><td>Leave it to each office to keep its own free-text note</td><td>No development cost, but perpetuates three unsynced lists and commencement's annual rebuild</td></tr>
+        <tr><td>Adopt a third-party name-pronunciation add-on tool</td><td>Purpose-built, but a new vendor and integration for a single field</td></tr>
+      </table>
+      <dt>Recommendation &amp; Decision</dt>
+      <dd>Add a single Phonetic Name field to the core Person record, student-editable through self-service, surfaced to commencement staging, ID-card printing, and the LMS roster.</dd>
       <dt>Rationale</dt>
-      <dd>One field maintained once, by the student, beats three unsynced spreadsheets maintained by three different offices.</dd>
+      <dd>One field maintained once, by the student, beats three unsynced lists maintained by three different offices, and removes commencement's annual rebuild entirely.</dd>
+      <dt>Owner / Status</dt>
+      <dd>Registrar &amp; IR Lead &nbsp;·&nbsp; Approved, scheduled for the next Person-record schema update</dd>
     </div>
 
     <div class="dcard" id="dcard-dept">
-      <h4>Adopt a single department-naming standard across systems</h4>
-      <div class="dmeta">DR-047 &nbsp;·&nbsp; Approved &nbsp;·&nbsp; IR / Data Lead &nbsp;·&nbsp; July 2026</div>
-      <dt>Context</dt>
-      <dd>Historical departments carried inconsistent full names and abbreviations across the SIS, HR, and Finance systems, which created mismatches in cross-system reporting and broke automated integration mappings.</dd>
-      <dt>Options considered</dt>
-      <ul class="opts">
-        <li>Leave legacy names as-is and reconcile mismatches case by case as they surface.</li>
-        <li>Adopt one standardized department-naming convention (full name plus a short code) across all systems.</li>
-        <li>Rename departments only inside the new SIS and leave every other system on its legacy naming.</li>
-      </ul>
-      <dt>Decision</dt>
-      <dd>Adopt a single standardized department-naming convention, full name plus short code, enforced across the SIS, HR, and Finance systems.</dd>
+      <div class="brief-head">
+        <h4>DR-047 &mdash; Department Naming Standards</h4>
+        <span class="pill pill-ok">Approved</span>
+      </div>
+      <div class="brief-sub">Roselawn University SIS Modernization Project &nbsp;|&nbsp; Decision Registry Briefing Doc &nbsp;|&nbsp; July 2026</div>
+      <dt>Problem Statement</dt>
+      <dd>The SIS caps department descriptions at a fixed character length, but Finance, HR, and the SIS carried inconsistent full names and abbreviations for the same departments, which created mismatches in cross-system reporting and broke automated integration mappings.</dd>
+      <dt>Current State</dt>
+      <dd>Legacy abbreviations were coined ad hoc over two decades, department by department, with no documented rubric. Reporting built on top of them has to reconcile spelling variants by hand before it can be trusted.</dd>
+      <dt>Options Considered</dt>
+      <table class="opt-table">
+        <tr><th>Option</th><th>Trade-off</th></tr>
+        <tr><td class="chosen">Adopt one standardized abbreviation rubric (full name plus a short code) across all systems</td><td>Removes ambiguity permanently; requires a one-time cleanup pass across existing department records</td></tr>
+        <tr><td>Leave legacy names as-is, reconciled case by case as mismatches surface</td><td>No upfront work, but the reconciliation burden never goes away</td></tr>
+        <tr><td>Rename departments only inside the new SIS, leave every other system on legacy naming</td><td>Fixes reporting inside the SIS but leaves HR and Finance out of sync with it</td></tr>
+      </table>
+      <dt>Recommendation &amp; Decision</dt>
+      <dd>Adopt a single standardized department-naming rubric, full name plus a short abbreviated code, enforced across the SIS, HR, and Finance systems going forward.</dd>
       <dt>Rationale</dt>
-      <dd>Removes a whole category of integration-mapping errors and ambiguity in cross-system reporting, rather than patching mismatches indefinitely.</dd>
+      <dd>Removes a whole category of integration-mapping errors and reporting ambiguity, rather than reconciling mismatches indefinitely, one report at a time.</dd>
+      <dt>Owner / Status</dt>
+      <dd>IR / Data Lead &nbsp;·&nbsp; Approved, rubric published and applied to new departments; legacy cleanup in progress</dd>
     </div>
 
     <div class="dcard" id="dcard-forms">
-      <h4>Standardize student forms on one platform</h4>
-      <div class="dmeta">DR-048 &nbsp;·&nbsp; Open (pilot in progress) &nbsp;·&nbsp; Program Director &nbsp;·&nbsp; August 2026</div>
-      <dt>Context</dt>
-      <dd>Dozens of paper and PDF student forms were being reproduced ad hoc across offices, each with its own routing and approval process and no shared platform.</dd>
-      <dt>Options considered</dt>
-      <ul class="opts">
-        <li>Continue with office-specific PDF forms and manual routing.</li>
-        <li>Adopt the newly selected forms platform as the single tool for building and approving all student forms, with automated approval routing.</li>
-        <li>Build custom forms individually in the university's low-code platform, office by office.</li>
-      </ul>
-      <dt>Decision</dt>
+      <div class="brief-head">
+        <h4>DR-048 &mdash; Student Forms Platform Recommendation</h4>
+        <span class="pill pill-open">Open (pilot in progress)</span>
+      </div>
+      <div class="brief-sub">Roselawn University SIS Modernization Project &nbsp;|&nbsp; Decision Registry Briefing Doc &nbsp;|&nbsp; August 2026</div>
+      <dt>Problem Statement</dt>
+      <dd>Dozens of paper and PDF student forms are reproduced ad hoc across offices, each with its own routing and approval process and no shared platform or audit trail.</dd>
+      <dt>Current State</dt>
+      <dd>Most offices maintain their own fillable PDFs, routed by email with no consistent approval record. Forms are rebuilt from scratch when a policy changes, and there is no institution-wide inventory of which forms exist or who owns them.</dd>
+      <dt>Options Considered</dt>
+      <table class="opt-table">
+        <tr><th>Option</th><th>Trade-off</th></tr>
+        <tr><td class="chosen">Standardize on the newly selected forms platform for all new and reengineered student forms, with automated approval routing</td><td>One platform for creation and routing, consistent with the vendor selection already underway; requires migrating existing forms over time</td></tr>
+        <tr><td>Continue with office-specific PDF forms and manual routing</td><td>No migration effort, but the audit-trail and consistency problems persist</td></tr>
+        <tr><td>Build custom forms individually in the university's low-code platform, office by office</td><td>Flexible, but duplicates effort the forms-platform vendor selection already covers</td></tr>
+      </table>
+      <dt>Recommendation &amp; Decision</dt>
       <dd>Standardize on the selected forms platform as the single home for all new and reengineered student forms, with automated routing for approvals.</dd>
       <dt>Rationale</dt>
       <dd>One platform for both creation and approval routing avoids duplicative tooling and keeps the vendor selection already underway from fragmenting further.</dd>
+      <dt>Owner / Status</dt>
+      <dd>Program Director &nbsp;·&nbsp; Open, first three pilot forms in build</dd>
     </div>
 
     <footer class="doc-footer">Prepared for portfolio illustration by Chris Meiers, PhD &nbsp;·&nbsp; chrismeiers@gmail.com</footer>

@@ -74,6 +74,28 @@
   .sp-list td{padding:7px 10px; border-bottom:1px solid var(--paper-line); color:var(--ink-soft);}
   .sp-list tr:last-child td{border-bottom:none;}
   .sp-cap{font-size:.78rem; color:var(--ink-soft); margin:8px 0 0; font-style:italic;}
+
+  .cs-shot{border:1px solid var(--paper-line); border-radius:8px; overflow:hidden; background:var(--surface); box-shadow:0 1px 2px var(--shadow); margin-top:10px;}
+  .cs-mast{display:flex; justify-content:space-between; align-items:flex-start; gap:12px; padding:12px 14px; background:var(--ink); color:var(--paper);}
+  .cs-mast h4{color:var(--paper); font-size:1.05rem; margin-bottom:2px;}
+  .cs-mast .cs-sub{font-size:.72rem; opacity:.82;}
+  .cs-badge{font-family:"IBM Plex Mono",monospace; font-size:.6rem; font-weight:600; letter-spacing:.03em; text-transform:uppercase; background:var(--brass); color:#fff8ec; padding:3px 8px; border-radius:4px; white-space:nowrap;}
+  .cs-meta{display:flex; flex-wrap:wrap; gap:4px 18px; padding:7px 14px; background:var(--paper-raised); border-bottom:1px solid var(--paper-line); font-size:.72rem; color:var(--ink-soft);}
+  .cs-meta b{color:var(--ink);}
+  .cs-body{padding:12px 14px;}
+  .cs-hero{background:var(--paper-raised); border:1px solid var(--paper-line); border-left:3px solid var(--brass); border-radius:6px; padding:8px 12px; margin-bottom:12px;}
+  .cs-hero .lbl{font-family:"IBM Plex Mono",monospace; font-size:.62rem; font-weight:600; letter-spacing:.03em; text-transform:uppercase; color:var(--brass-strong); margin-bottom:4px;}
+  .cs-hero p{margin:0; font-size:.8rem; color:var(--ink-soft);}
+  table.cs-table{width:100%; border-collapse:collapse; font-size:.78rem; margin-bottom:12px;}
+  table.cs-table th{text-align:left; font-family:"IBM Plex Mono",monospace; font-size:.6rem; text-transform:uppercase; letter-spacing:.03em; color:var(--ink-soft); background:var(--paper-raised); padding:5px 8px; border-bottom:1.5px solid var(--ink-soft);}
+  table.cs-table td{padding:5px 8px; border-bottom:1px solid var(--paper-line); vertical-align:top;}
+  td.mn, span.mn{font-family:"IBM Plex Mono",monospace; font-weight:700; color:var(--brass-strong); white-space:nowrap;}
+  td.watch{color:var(--ink-soft); font-size:.76rem;}
+  .cs-decoder{columns:2; column-gap:16px; font-size:.76rem; color:var(--ink-soft); margin-bottom:12px;}
+  .cs-decoder div{break-inside:avoid; margin-bottom:3px;}
+  ul.cs-rules{margin:0 0 4px; padding-left:0; list-style:none; font-size:.78rem; color:var(--ink-soft);}
+  ul.cs-rules li{position:relative; padding-left:12px; margin-bottom:4px;}
+  ul.cs-rules li::before{content:""; position:absolute; left:0; top:6px; width:5px; height:5px; background:var(--brass); border-radius:1px;}
 </style>
 </head>
 <body>
@@ -150,13 +172,46 @@
     </div>
 
     <div class="tpane" id="tpane-cheat">
-      <p class="doc-p">A one-page cheat sheet accompanies each guide, sized for a monitor-edge sticky note rather than a binder.</p>
-      <table class="doc-table">
-        <tr><th>Functional Area</th><th>Cheat Sheet</th><th>Training Steps Covered</th></tr>
-        <tr><td>Chart of Accounts</td><td>Chart of Accounts one-pager</td><td>12 steps</td></tr>
-        <tr><td>GL Structure Validation</td><td>GL Structure Validation one-pager</td><td>9 steps</td></tr>
-        <tr><td>Person Lookup</td><td>Person Lookup one-pager</td><td>7 steps</td></tr>
-      </table>
+      <p class="doc-p">A one-page cheat sheet accompanies each guide, sized for a monitor-edge sticky note rather than a binder. Person Lookup's is shown below at full size; Chart of Accounts and GL Structure Validation follow the same template.</p>
+
+      <div class="cs-shot">
+        <div class="cs-mast">
+          <div>
+            <span class="cs-badge">Colleague CORE / Registrar</span>
+            <h4>Person Lookup</h4>
+            <div class="cs-sub">Finding people, reading name and ID formats, and the wildcard search trick</div>
+          </div>
+        </div>
+        <div class="cs-meta">
+          <div><b>Audience:</b> Registrar, Advising, Front Desk staff</div>
+          <div><b>Functional Owner:</b> Registrar Lead</div>
+          <div><b>Version:</b> 1.0 &middot; August 2026</div>
+        </div>
+        <div class="cs-body">
+          <div class="cs-hero">
+            <div class="lbl">The wildcard lookup</div>
+            <p>Three dots in any name or ID field return everything defined for it. A partial value plus dots filters: <span class="mn">del...</span> in the last-name field returns every Delgado, Delacruz, and Delahunt on file. Use it before assuming a person record doesn't exist.</p>
+          </div>
+          <table class="cs-table">
+            <tr><th>I want to&hellip;</th><th>Go to</th><th>Watch out for</th></tr>
+            <tr><td>Find a person by name, ID, or partial spelling</td><td class="mn">PLKP</td><td class="watch">Try the phonetic name field too, DR-044, if the legal-name spelling isn't landing a match</td></tr>
+            <tr><td>See a person's full record: contact info, program, holds</td><td class="mn">NAME</td><td class="watch">Preferred name displays above legal name if one is on file</td></tr>
+            <tr><td>Look up a prior or transfer institution on a person's record</td><td class="mn">ILKP</td><td class="watch">Check the Institution Lookup list first, samples above, before creating a new institution record</td></tr>
+            <tr><td>Add or correct a phonetic name / preferred pronunciation</td><td class="mn">PNAM</td><td class="watch">Feeds commencement, ID printing, and the LMS automatically, DR-044</td></tr>
+          </table>
+          <div class="cs-decoder">
+            <div><span class="mn">PLKP</span> Person LooKuP</div>
+            <div><span class="mn">NAME</span> Person record, full detail</div>
+            <div><span class="mn">ILKP</span> Institution LooKuP</div>
+            <div><span class="mn">PNAM</span> Phonetic NAMe maintenance</div>
+          </div>
+          <ul class="cs-rules">
+            <li><b>Check before you create.</b> Confirm on ILKP that an institution doesn't already exist, under a slightly different spelling, before adding a new one.</li>
+            <li><b>One phonetic name field, not three lists.</b> Update it once on PNAM rather than keeping a separate office note, DR-044.</li>
+            <li><b>The &ldquo;&hellip;&rdquo; lookup works everywhere.</b> Names, IDs, and institution names all support the same wildcard pattern.</li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <h2 class="sec">3. SIS SharePoint List Samples</h2>
