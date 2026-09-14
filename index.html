@@ -200,6 +200,41 @@
     font-family:"IBM Plex Mono", monospace; font-size:.72rem; font-weight:600; text-decoration:none;
   }
 
+  .sp-mock{margin-top:16px; padding-top:14px; border-top:1px solid var(--paper-line);}
+  .sp-mock:first-child{margin-top:0; padding-top:0; border-top:none;}
+  .sp-shot{
+    border:1px solid var(--paper-line); border-radius:8px; overflow:hidden;
+    background:var(--surface); box-shadow:0 1px 2px var(--shadow);
+  }
+  .sp-chrome{
+    display:flex; align-items:center; gap:6px; padding:7px 10px;
+    background:var(--paper-raised); border-bottom:1px solid var(--paper-line);
+  }
+  .sp-dot{width:7px; height:7px; border-radius:50%; background:var(--paper-line); flex:none;}
+  .sp-url{
+    font-family:"IBM Plex Mono",monospace; font-size:.62rem; color:var(--ink-soft);
+    margin-left:6px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+  }
+  .sp-head{
+    display:flex; align-items:center; justify-content:space-between; gap:8px;
+    padding:9px 12px; background:linear-gradient(180deg, var(--paper-raised), var(--surface));
+    border-bottom:1px solid var(--paper-line);
+  }
+  .sp-head span{font-family:"Fraunces",serif; font-size:.86rem; color:var(--ink);}
+  .sp-head em{
+    font-style:normal; font-family:"IBM Plex Mono",monospace; font-size:.6rem;
+    color:var(--brass-strong); border:1px solid var(--paper-line); border-radius:4px; padding:1px 6px;
+  }
+  .sp-list{width:100%; border-collapse:collapse; font-size:.72rem;}
+  .sp-list th{
+    text-align:left; font-family:"IBM Plex Mono",monospace; font-size:.58rem; text-transform:uppercase;
+    letter-spacing:.03em; color:var(--ink-soft); background:var(--paper-raised);
+    padding:6px 10px; border-bottom:1px solid var(--paper-line);
+  }
+  .sp-list td{padding:6px 10px; border-bottom:1px solid var(--paper-line); color:var(--ink-soft);}
+  .sp-list tr:last-child td{border-bottom:none;}
+  .sp-cap{font-size:.72rem; color:var(--ink-soft); margin:8px 0 0; font-style:italic;}
+
   @media (max-width:760px){
     .case{grid-template-columns:1fr;}
   }
@@ -406,7 +441,7 @@
         <div class="sample-mini">
           <span class="case-label">Illustrative Sample</span>
           <p class="sample-mini-title">UAT Final Report &amp; Sign-Off Guide</p>
-          <p>Test coverage by functional area, issue tracking, and the sign-off pathway to go-live.</p>
+          <p>Toggle between GL, overall UAT, retest tracking, end-user documentation, and cheat sheets, plus mocked institution and person lookup lists.</p>
           <a class="sample-link" href="samples/uat-report.html" target="_blank" rel="noopener">Open sample ↗</a>
         </div>
       </div>
@@ -442,7 +477,7 @@
         <div class="sample-mini">
           <span class="case-label">Illustrative Sample</span>
           <p class="sample-mini-title">Agentic AI &amp; Governance Decision Log</p>
-          <p>Every AI-assisted workflow or governance call, logged with rationale, owner, and status.</p>
+          <p>Every AI-assisted workflow or governance call, logged with rationale, owner, and status. Three entries expanded to full write-ups below, toggled by topic.</p>
           <a class="sample-link" href="samples/decision-registry.html" target="_blank" rel="noopener">Open sample ↗</a>
         </div>
       </div>
@@ -463,7 +498,7 @@
           <span class="tag">Steering committee design</span>
           <span class="tag">Executive briefings</span>
         </div>
-        <p style="margin-top:12px; font-size:.85rem;">Reference document: <a href="documents/KCKCC_Strategic_Enrollment_Management_Plan.pdf" target="_blank" rel="noopener">KCKCC 5-Year SEM Plan (PDF)</a></p>
+        <p style="margin-top:12px; font-size:.85rem;">Reference documents: <a href="documents/KCKCC_Strategic_Enrollment_Management_Plan.pdf" target="_blank" rel="noopener">KCKCC 5-Year SEM Plan (PDF)</a> &nbsp;·&nbsp; <a href="documents/WSUTC_Student_Affairs_Strategic_Map_2014.pdf" target="_blank" rel="noopener">WSU Tri-Cities Strategic Map (PDF)</a></p>
       </div>
       <div class="case-figure">
         <div style="text-align:center; padding:20px 10px;">
@@ -473,17 +508,20 @@
           <div style="font-family:'Fraunces',serif; font-size:1.4rem; color:var(--ink);">20+ stakeholders</div>
           <div style="font-family:'IBM Plex Mono',monospace; font-size:.78rem; color:var(--ink-soft); margin-top:4px;">monthly SIS/ERP Executive Committee governance, PNWU</div>
         </div>
-        <div class="sample-mini">
+        <div class="sp-mock">
           <span class="case-label">Illustrative Sample</span>
-          <p class="sample-mini-title">Strategic Planning &amp; Executive Governance Charter</p>
-          <p>Scope, governance structure, milestones, and success metrics for a strategic-plan initiative.</p>
-          <a class="sample-link" href="samples/governance-charter.html" target="_blank" rel="noopener">Open sample ↗</a>
-        </div>
-        <div class="sample-mini">
-          <span class="case-label">Illustrative Sample</span>
-          <p class="sample-mini-title">Strategic Map</p>
-          <p>One-page pillars, targets, and metrics translation of a five-year strategic plan.</p>
-          <a class="sample-link" href="samples/strategic-map.html" target="_blank" rel="noopener">Open sample ↗</a>
+          <div class="sp-shot">
+            <div class="sp-chrome"><span class="sp-dot"></span><span class="sp-dot"></span><span class="sp-dot"></span><span class="sp-url">portal.roselawnu.edu/sites/strategic-planning</span></div>
+            <div class="sp-head"><span>Strategic Planning &amp; Governance Hub</span><em>SharePoint</em></div>
+            <table class="sp-list">
+              <tr><th>Name</th><th>Type</th><th>Modified</th></tr>
+              <tr><td>Executive Steering Committee — Agendas &amp; Minutes</td><td>Library</td><td>Aug 2026</td></tr>
+              <tr><td>Five-Year Strategic Plan — Working Drafts</td><td>Library</td><td>Jul 2026</td></tr>
+              <tr><td>Division KPI Scorecards</td><td>List</td><td>Monthly</td></tr>
+              <tr><td>Board Committee Briefing Materials</td><td>Library</td><td>Quarterly</td></tr>
+            </table>
+          </div>
+          <p class="sp-cap">Mocked SharePoint site, fictional Roselawn University data — illustrating where this governance work actually lives day to day.</p>
         </div>
       </div>
     </div>
@@ -507,7 +545,7 @@
           <span class="tag">Student governance</span>
           <span class="tag">Student union &amp; housing capital projects</span>
         </div>
-        <p style="margin-top:12px; font-size:.85rem;">Reference document: <a href="documents/KCKCC_Strategic_Enrollment_Management_Plan.pdf" target="_blank" rel="noopener">KCKCC SEM Plan (PDF)</a></p>
+        <p style="margin-top:12px; font-size:.85rem;">Reference documents: <a href="documents/KCKCC_Strategic_Enrollment_Management_Plan.pdf" target="_blank" rel="noopener">KCKCC SEM Plan (PDF)</a> &nbsp;·&nbsp; <a href="documents/WSUTC_Student_Affairs_Playbook.pdf" target="_blank" rel="noopener">WSU Tri-Cities Student Affairs Playbook (PDF)</a></p>
       </div>
       <div class="case-figure">
         <svg viewBox="0 0 320 190" role="img" aria-label="Two enrollment outcomes: FTE enrollment at WSU Tri-Cities grew 38 percent to an all-time high of 1,868 students; new student enrollment at KCKCC grew 8.5 percent in Fall 2023 versus Fall 2022.">
@@ -528,17 +566,20 @@
           <text x="55" y="129" class="val2">+8.5%</text>
           <text x="10" y="152" class="axlbl2">Board-approved SEM Plan delivered within year one</text>
         </svg>
-        <div class="sample-mini">
+        <div class="sp-mock">
           <span class="case-label">Illustrative Sample</span>
-          <p class="sample-mini-title">Strategic Enrollment Management Charter</p>
-          <p>Governance council, milestones to Board approval, and success metrics for a SEM plan build.</p>
-          <a class="sample-link" href="samples/sem-charter.html" target="_blank" rel="noopener">Open sample ↗</a>
-        </div>
-        <div class="sample-mini">
-          <span class="case-label">Illustrative Sample</span>
-          <p class="sample-mini-title">Student Affairs Playbook</p>
-          <p>Functional-area ownership, operating cadence, and escalation protocols in one shared reference.</p>
-          <a class="sample-link" href="samples/student-affairs-playbook.html" target="_blank" rel="noopener">Open sample ↗</a>
+          <div class="sp-shot">
+            <div class="sp-chrome"><span class="sp-dot"></span><span class="sp-dot"></span><span class="sp-dot"></span><span class="sp-url">portal.roselawnu.edu/sites/student-affairs</span></div>
+            <div class="sp-head"><span>Student Affairs Operations Hub</span><em>SharePoint</em></div>
+            <table class="sp-list">
+              <tr><th>Name</th><th>Type</th><th>Modified</th></tr>
+              <tr><td>Functional Area Status Updates</td><td>List</td><td>Weekly</td></tr>
+              <tr><td>New Student Crisis &amp; Escalation Case Log</td><td>List (restricted)</td><td>Aug 2026</td></tr>
+              <tr><td>Enrollment Funnel Dashboard</td><td>Power BI embed</td><td>Daily</td></tr>
+              <tr><td>New-Lead Onboarding Checklists</td><td>Library</td><td>Jul 2026</td></tr>
+            </table>
+          </div>
+          <p class="sp-cap">Mocked SharePoint site, fictional Roselawn University data — illustrating where this operational work actually lives day to day.</p>
         </div>
       </div>
     </div>
