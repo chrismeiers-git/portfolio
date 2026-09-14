@@ -8,7 +8,7 @@
 ## Structure
 
 **Hero**
-Name, current title (Interim ERP Program Director / SIS Modernization Project Director, PNWU), one-line thesis on the 25+ year cross-functional throughline, PhD credential, ACE Fellow / NASPA Pillar chips, contact CTAs. A theme toggle in the nav lets a viewer force light or dark regardless of their system setting.
+Name, current title (ERP Program Director / SIS Modernization Project Director, PNWU), one-line thesis on the 25+ year cross-functional pattern, PhD credential, ACE Fellow / NASPA Pillar chips, contact CTAs. A theme toggle in the nav lets a viewer force light or dark regardless of their system setting.
 
 **About**
 Two sentences: the six-institution breadth ("led or worked in nearly every major function"), then the "translate between the room that owns the budget and the room that owns the system" framing.
@@ -21,20 +21,20 @@ Two sentences: the six-institution breadth ("led or worked in nearly every major
 
 **Featured Work — four case studies (one per pillar)**
 1. *Ellucian Colleague SIS Modernization* — PNWU $3.37M program, tri-party delivery, scope-reduction CR, the KUMC "second time" data point, UAT methodology, system-scale bullet, the Paylocity-to-LDAP integration bullet, and the Kuali Build forms-platform / payment-gateway vendor-selection bullet. The former arrow-diagram graphic is now a real stat block: **75** active UAT validation plans drafted since July 2025, and **381** UAT & data-testing steps tracked in the SharePoint/Power BI ecosystem (both pulled from the live program dashboards).
-2. *Agentic AI Tooling, Institutional Research & Doctoral Statistics* — Claude Enterprise/Cowork + M365 Copilot agentic workflows on SharePoint/Power BI/Power Platform, the IPEDS staffing benchmark dashboard, doctoral statistics teaching since 2011 (naming University of Kansas Medical Center and Washington State University, and SPSS), and dissertation-research consulting since 2018. The former arrow-diagram graphic is now a real stat block: **6** governance decisions logged in the AI-assisted Decision Registry, and **1,600+** faculty & staff records converted from the legacy SIS.
+2. *Agentic AI Tooling, Institutional Research & Doctoral Statistics* — Claude Enterprise/Cowork + M365 Copilot agentic workflows on SharePoint/Power BI/Power Platform, the IPEDS staffing benchmark dashboard, doctoral statistics teaching since 2011 (naming University of Kansas Medical Center and Washington State University, and SPSS), and dissertation-research consulting since 2018. The former arrow-diagram graphic is now a real stat block: **6** governance decisions logged in the AI-assisted Decision Registry, and **1,600+** faculty & staff records converted from the legacy SIS. As of Version 12, this case also links out to a real, live tool (labeled "Live Tool," not "Illustrative Sample," since it's not fictional Roselawn content): the LD 810 practice quiz portal, a public GitHub Pages app Chris built for his SMU doctoral statistics students (https://chrismeiers-git.github.io/ld810/).
 3. *Board-Approved Plans & Steering Committee Governance* — KCKCC's five-year SEM Plan, PNWU Steering/Executive Committee governance, WSU IT Strategic Advisory chair. Language frames this as team-led work ("led the cross-functional planning process that built...", "worked with division leaders to stand up...") rather than solo credit. The two real reference PDFs (KCKCC SEM Plan, WSU Tri-Cities Strategic Map) are now shown as "Reference Document" boxes in the figure column (same visual component as the illustrative-sample boxes, reused with different labeling since these are real, not fictional), sitting above the mocked SharePoint site box (see below). No standalone charter/map sample page for this case.
 4. *Chief Student Affairs & Enrollment Officer, Two Institutions* — WSU FTE +38% and the $7.5M Student Union Building; KCKCC SEM Plan results, $20M residence hall, Basic Needs Center, Student Activities/student governance oversight; NASPA/ACE recognition. Condensed to 3 bullets (from 5) as of this pass; no facts dropped, just consolidated. Language reframed to collaborative/higher-ed norms: "led the division that grew...", "worked with students and campus leadership to deliver...", "led the team that built and delivered..., the division then posted [results]." The former SVG enrollment bar-chart graphic in the figure column was removed and replaced with a single "Reference Document" box for the real WSU Tri-Cities Student Affairs Playbook PDF, followed by the mocked SharePoint site box (see below). The KCKCC SEM Plan reference now lives only on Case 3 (no longer duplicated here).
 
 **Illustrative Work Samples — integrated into each case study's right-hand column**
 Two of the four cases (Case 1 and Case 2) still link out to a full, styled standalone HTML sample page; Case 3 and Case 4 now show a compact "mocked SharePoint site" graphic instead of separate pages (see Version 8 → 9 notes below for why). All sample content uses a fictional institution, **Roselawn University**, with entirely fictional data throughout:
 - Case 1: Executive Program Dashboard (`samples/dashboard.html`) and UAT Final Report & Sign-Off Guide (`samples/uat-report.html`) — the UAT sample is now a tabbed page: toggle between GL, overall UAT, Update Testing (retest tracking), End User Documentation, and Cheat Sheets, plus a second toggle group with two mocked "SIS SharePoint List" views (Institution Lookup, Person Lookup).
-- Case 2: Decision Registry (`samples/decision-registry.html`) — the summary table (including DR-012, DR-041, DR-044) is followed by a toggled "Decision Detail" section with three full write-ups: Phonetic Name Storage, Department Naming Standards, and Student Forms Recommendations (context, options considered, decision, rationale).
+- Case 2: Decision Registry (`samples/decision-registry.html`) — the summary table (including DR-012, DR-041, DR-044) is followed by a toggled "Decision Detail" section with three full write-ups: Phonetic Name Storage, Department Naming Standards, and Student Forms Recommendations (context, options considered, decision, rationale). Case 2 also now links directly to the real, live LD 810 quiz portal (https://chrismeiers-git.github.io/ld810/) as a "Live Tool" box, alongside the fictional Decision Registry sample.
 - Case 3: a mocked "Strategic Planning & Governance Hub" SharePoint site box (browser-chrome style, fictional Roselawn data) sits next to the case study, alongside the two real reference-document links.
 - Case 4: a mocked "Student Affairs Operations Hub" SharePoint site box (same treatment) sits next to the case study, alongside the two real reference-document links.
 All sample pages and mocked SharePoint boxes follow the portfolio's own light/dark theme automatically.
 
 **How I Work**
-Three short principles: translate between rooms; "for the student: design for their needs first, then build the process around it"; build tools that outlast the project.
+Three short principles, student-first one now leads: "for the student, design for their needs first, then build the process around it"; translate between rooms; build tools that outlast the project.
 
 **Education**
 PhD (Educational Psychology, Research/Measurement/Statistics, University of Kansas); MS Educational Administration + BA Chemistry (Fort Hays State); Certificate, Institute for Educational Management (Harvard GSE).
@@ -64,6 +64,19 @@ Email / LinkedIn CTAs.
 - Resolved (Version 11): the orphaned `strategic-map.html`, `student-affairs-playbook.html`, `governance-charter.html`, and `sem-charter.html` files were deleted from `career/07_portfolio/samples/`. They still exist in `~/Documents/GitHub/portfolio/samples/` until that folder is next synced — delete them there too as part of the next sync/push.
 - Em-dashes removed throughout the portfolio copy and the sample HTML pages (replaced with commas, colons, or "·").
 - Chris has already initialized a git repository at `~/Documents/GitHub/portfolio` (with a remote `origin` configured) — the GitHub Pages push itself is his to continue.
+
+## Notes on this edit pass (Version 12 → 13)
+
+- On first use, spelled out both acronyms in the hero tagline: "ERP (enterprise resource planning) and SIS (student information system) modernization." Left later SIS/ERP references as bare acronyms per normal usage.
+- Dropped "Interim" from the title everywhere it appeared (hero chip and the Case 1 opening sentence) — Chris now goes by ERP Program Director / SIS Modernization Project Director, full stop, no qualifier.
+- Removed "throughline" language (Claude's voice, not Chris's) in two spots: the About section sentence now opens "Across all of it, I translate..." instead of "The throughline:"; the Featured Work heading changed from "Four areas, one throughline" to "The work behind each one."
+- Reordered the "How I Work" principles so the student-first line comes first, and removed the colon after "For the student" (now "For the student, design for their needs first...").
+- Synced `index.html` into `~/Documents/GitHub/portfolio/` and committed locally (commit message: "Copy edits: spell out SIS/ERP on first use, drop Interim title and throughline language, reorder How I Work habits"). The push to GitHub itself still needs to happen from Chris's own machine — this session's local shell has no GitHub credentials, same limitation noted in prior passes.
+
+## Notes on this edit pass (Version 11 → 12)
+
+- Added a new "Live Tool" box to Case 2 (Agentic AI Tooling, Institutional Research & Doctoral Statistics), linking directly to the real, live LD 810 practice quiz portal (https://chrismeiers-git.github.io/ld810/, a public GitHub Pages app Chris built and maintains for his SMU doctoral statistics students). Used a new "Live Tool" label rather than "Illustrative Sample" since this is real content, not the fictional Roselawn University data used elsewhere, following the same real-vs-fictional distinction already established for the Case 3/4 "Reference Document" boxes.
+- Not yet synced to `~/Documents/GitHub/portfolio` or pushed (that folder isn't connected to this session) — Chris needs to sync `index.html` there and push, same as the still-pending Version 10/11 push noted above.
 
 ## Notes on this edit pass (Version 9 → 10)
 
