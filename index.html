@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Chris Meiers — Portfolio</title>
+<title>Chris Meiers, PhD</title>
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Source+Sans+3:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --ink:#17222f;
+    --ink-soft:#3b4a5a;
+    --paper:#f6f3ec;
+    --paper-raised:#efe8d8;
+    --paper-line:rgba(23,34,47,.14);
+    --brass:#9c6b2e;
+    --brass-strong:#7d5522;
+    --track:#e2dac5;
+    --surface:#fffdf8;
+    --shadow:rgba(23,34,47,.08);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ink:#eee7d8;
+      --ink-soft:#b9c2cd;
+      --paper:#12181f;
+      --paper-raised:#1b232d;
+      --paper-line:rgba(238,231,216,.14);
+      --brass:#d3a35f;
+      --brass-strong:#e5b878;
+      --track:#2a3440;
+      --surface:#182029;
+      --shadow:rgba(0,0,0,.35);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ink:#eee7d8;
+    --ink-soft:#b9c2cd;
+    --paper:#12181f;
+    --paper-raised:#1b232d;
+    --paper-line:rgba(238,231,216,.14);
+    --brass:#d3a35f;
+    --brass-strong:#e5b878;
+    --track:#2a3440;
+    --surface:#182029;
+    --shadow:rgba(0,0,0,.35);
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Source Sans 3", system-ui, sans-serif;
+    font-size:16.5px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{
+    max-width:920px;
+    margin:0 auto;
+    padding:0 24px;
+  }
+  h1,h2,h3{
+    font-family:"Fraunces", Georgia, serif;
+    font-weight:500;
+    text-wrap:balance;
+    margin:0;
+    color:var(--ink);
+  }
+  .eyebrow{
+    font-family:"IBM Plex Mono", monospace;
+    font-size:.72rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--brass-strong);
+    margin:0 0 10px;
+  }
+  a{color:var(--brass-strong);}
+  p{color:var(--ink-soft); max-width:66ch;}
+
+  nav{
+    position:sticky; top:0; z-index:5;
+    background:color-mix(in srgb, var(--paper) 88%, transparent);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--paper-line);
+  }
+  nav .wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-block:14px; gap:16px; flex-wrap:wrap;
+  }
+  nav .brand{font-family:"Fraunces",serif; font-size:1.02rem; font-weight:600;}
+  nav .links{display:flex; gap:22px; flex-wrap:wrap;}
+  nav .links a{
+    color:var(--ink-soft); text-decoration:none; font-size:.88rem; font-weight:500;
+  }
+  nav .links a:hover{color:var(--brass-strong);}
+  .theme-toggle{
+    font-family:"IBM Plex Mono", monospace;
+    font-size:.78rem; font-weight:500;
+    color:var(--ink-soft);
+    background:var(--paper-raised);
+    border:1px solid var(--paper-line);
+    border-radius:100px;
+    padding:5px 12px;
+    cursor:pointer;
+  }
+  .theme-toggle:hover{color:var(--brass-strong); border-color:var(--brass-strong);}
+
+  header.hero{padding-block:56px 16px;}
+  .hero-meta{
+    display:flex; gap:10px; flex-wrap:wrap; margin-top:20px;
+  }
+  .chip{
+    font-family:"IBM Plex Mono", monospace;
+    font-size:.76rem;
+    padding:5px 11px;
+    border:1px solid var(--paper-line);
+    border-radius:100px;
+    color:var(--ink-soft);
+    white-space:nowrap;
+  }
+  h1.name{font-size:clamp(2.1rem, 5vw, 3.1rem); line-height:1.08;}
+  .tagline{font-size:1.18rem; margin-top:16px; max-width:56ch; color:var(--ink-soft);}
+  .cta-row{display:flex; gap:12px; flex-wrap:wrap; margin-top:24px;}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:11px 20px; border-radius:8px;
+    font-size:.92rem; font-weight:600; text-decoration:none;
+    border:1px solid transparent;
+  }
+  .btn-primary{background:var(--ink); color:var(--paper);}
+  .btn-ghost{border-color:var(--paper-line); color:var(--ink);}
+
+  section{padding-block:40px;}
+  section.divider{border-top:1px solid var(--paper-line);}
+  #about{padding-block:0 32px;}
+  .section-head{margin-bottom:30px;}
+  .section-head h2{font-size:clamp(1.5rem,3vw,1.9rem);}
+  .section-head p{margin-top:8px;}
+
+  .pillars{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+    gap:16px;
+  }
+  .pillar{
+    background:var(--surface);
+    border:1px solid var(--paper-line);
+    border-radius:12px;
+    padding:20px 18px;
+    display:flex; flex-direction:column; gap:10px;
+  }
+  .pillar h3{font-size:1.05rem;}
+  .pillar p{font-size:.92rem; margin:0;}
+  .tags{display:flex; flex-wrap:wrap; gap:6px; margin-top:auto; padding-top:6px;}
+  .tag{
+    font-family:"IBM Plex Mono", monospace;
+    font-size:.68rem;
+    color:var(--ink-soft);
+    background:var(--paper-raised);
+    padding:3px 8px;
+    border-radius:5px;
+  }
+
+  .case{
+    display:grid;
+    grid-template-columns:1.15fr 1fr;
+    gap:34px;
+    align-items:start;
+    padding-block:36px;
+    border-top:1px solid var(--paper-line);
+  }
+  .case:first-of-type{border-top:none;}
+  .case-figure{
+    background:var(--surface);
+    border:1px solid var(--paper-line);
+    border-radius:12px;
+    padding:18px;
+  }
+  .case-figure svg{display:block; width:100%; height:auto;}
+  .case-label{
+    font-family:"IBM Plex Mono", monospace;
+    font-size:.7rem; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--brass-strong); margin-bottom:8px; display:block;
+  }
+  .case h3{font-size:1.3rem; margin-bottom:10px;}
+  .case p{font-size:.96rem;}
+  .case ul{margin:12px 0 0; padding-left:18px; color:var(--ink-soft); font-size:.92rem;}
+  .case li{margin-bottom:6px;}
+  .case .tags{margin-top:14px;}
+
+  .sample-mini{margin-top:16px; padding-top:14px; border-top:1px solid var(--paper-line);}
+  .sample-mini:first-child{margin-top:0; padding-top:0; border-top:none;}
+  .sample-mini-title{font-family:"Fraunces",serif; font-size:.96rem; font-weight:500; color:var(--ink); margin:0 0 4px;}
+  .sample-mini p{font-size:.8rem; margin:0 0 8px; max-width:none;}
+  .sample-mini a.sample-link{
+    font-family:"IBM Plex Mono", monospace; font-size:.72rem; font-weight:600; text-decoration:none;
+  }
+
+  @media (max-width:760px){
+    .case{grid-template-columns:1fr;}
+  }
+
+  .principles{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:18px;
+  }
+  .principle{
+    border-left:2px solid var(--brass);
+    padding-left:16px;
+  }
+  .principle p{font-family:"Fraunces",serif; font-size:1.05rem; font-style:italic; color:var(--ink); margin:0;}
+
+  .edu-row{
+    display:flex; gap:16px; align-items:baseline; flex-wrap:wrap;
+    padding:16px 0; border-top:1px solid var(--paper-line);
+  }
+  .edu-row:last-child{border-bottom:1px solid var(--paper-line);}
+  .edu-row .deg{font-weight:600; min-width:220px;}
+  .edu-row .inst{color:var(--ink-soft); font-size:.92rem;}
+
+  footer{padding-block:50px 70px;}
+  footer .wrap{
+    display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:20px;
+  }
+  footer p{font-size:.86rem;}
+
+  .num{font-variant-numeric:tabular-nums;}
+</style>
+</head>
+<body>
+
+
+<nav>
+  <div class="wrap">
+    <span class="brand">Chris Meiers</span>
+    <div class="links">
+      <a href="#capabilities">Capabilities</a>
+      <a href="#work">Work</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+      <button id="theme-toggle" type="button" class="theme-toggle" aria-label="Toggle light and dark background">☀ Light</button>
+    </div>
+  </div>
+</nav>
+<script>
+(function(){
+  try{
+    var root = document.documentElement;
+    var btn = document.getElementById('theme-toggle');
+    var stored = null;
+    try{ stored = localStorage.getItem('portfolio-theme'); }catch(e){}
+    function computedIsDark(){
+      return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+    function labelFor(mode){
+      var effectiveDark = mode === 'dark' || (mode === null && computedIsDark());
+      return effectiveDark ? '☀ Light' : '☾ Dark';
+    }
+    function apply(mode){
+      if(mode === 'light'){ root.setAttribute('data-theme','light'); }
+      else if(mode === 'dark'){ root.setAttribute('data-theme','dark'); }
+      else { root.removeAttribute('data-theme'); }
+      if(btn) btn.textContent = labelFor(mode);
+    }
+    var current = stored;
+    apply(current);
+    if(btn){
+      btn.addEventListener('click', function(){
+        var effectiveDark = current === 'dark' || (current === null && computedIsDark());
+        current = effectiveDark ? 'light' : 'dark';
+        try{ localStorage.setItem('portfolio-theme', current); }catch(e){}
+        apply(current);
+      });
+    }
+  }catch(e){}
+})();
+</script>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Portfolio · Higher Education Executive Leadership</p>
+    <h1 class="name">Chris Meiers, PhD</h1>
+    <p class="tagline">Higher education executive with 25+ years across student affairs, enrollment management, registrar services, and technology, currently directing a university's full ERP/SIS modernization and building the AI tooling, governance structures, and strategic plans that carry it.</p>
+    <div class="hero-meta">
+      <span class="chip">Interim ERP Program Director / SIS Modernization Project Director · PNWU</span>
+      <span class="chip">PhD, Educational Psychology · University of Kansas</span>
+      <span class="chip">ACE Fellow · NASPA Pillar of the Profession</span>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="mailto:chrismeiers@gmail.com">Email Chris</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/chrismeiersphd/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <p style="max-width:64ch; font-size:1.02rem;">Across six institutions, I've led or worked in nearly every major function a university runs: admissions, registrar, financial aid, student affairs, IT, housing, athletics, research, and teaching. The throughline: translate between the room that owns the budget and the room that owns the system, and build something durable enough to outlast the project.</p>
+  </div>
+</section>
+
+<section id="capabilities" class="divider">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Capabilities</p>
+      <h2>Four ways I show up on a project</h2>
+    </div>
+    <div class="pillars">
+      <div class="pillar">
+        <h3>Data, Analytics, AI &amp; Applied Statistics</h3>
+        <p>Institutional research and agentic AI tooling built for how a university actually decides things, using Power BI, SharePoint, the Power Platform, and SPSS, grounded in a PhD in applied statistics and doctoral-level teaching.</p>
+        <div class="tags">
+          <span class="tag">Claude Enterprise / Cowork</span>
+          <span class="tag">Power BI / DAX</span>
+          <span class="tag">Power Platform (Power Apps/Automate)</span>
+          <span class="tag">SharePoint</span>
+          <span class="tag">SPSS</span>
+          <span class="tag">Applied statistics (PhD)</span>
+        </div>
+      </div>
+      <div class="pillar">
+        <h3>Enterprise Systems &amp; ERP/SIS Integration</h3>
+        <p>Client-side leadership of two major SIS implementations, twenty-plus years apart, at different institution types, with a systems portfolio spanning legacy single-instance SIS up through full enterprise suites and third-party ERP integrations.</p>
+        <div class="tags">
+          <span class="tag">Ellucian Platforms</span>
+          <span class="tag">Colleague SIS</span>
+          <span class="tag">PeopleSoft SIS</span>
+          <span class="tag">Ethos Integration</span>
+          <span class="tag">Paylocity / LDAP integration</span>
+          <span class="tag">Kuali Build</span>
+        </div>
+      </div>
+      <div class="pillar">
+        <h3>Strategic Planning &amp; Executive Governance</h3>
+        <p>Steering committees, board-approved plans, and the executive reporting that keeps leadership and a board aligned on scope, built across three institution types: community college, private health sciences university, and public regional university.</p>
+        <div class="tags">
+          <span class="tag">Steering committees</span>
+          <span class="tag">Board-approved plans</span>
+          <span class="tag">Executive reporting</span>
+          <span class="tag">Cross-institution-type</span>
+        </div>
+      </div>
+      <div class="pillar">
+        <h3>Student Affairs &amp; Enrollment Management</h3>
+        <p>Chief student affairs and enrollment officer at two institutions, a community college and a regional public university, with enrollment growth, tuition and fee governance, student governance oversight, capital projects, and board-approved SEM plans to show for it.</p>
+        <div class="tags">
+          <span class="tag">SEM planning</span>
+          <span class="tag">Enrollment growth</span>
+          <span class="tag">Tuition &amp; fee governance</span>
+          <span class="tag">Student governance</span>
+          <span class="tag">Capital projects</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work" class="divider">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Featured Work</p>
+      <h2>Four areas, one throughline</h2>
+      <p>Each of these started as a mess of spreadsheets, meetings, or manual review, and ended as a system someone else could run without me in the room.</p>
+    </div>
+
+    <div class="case">
+      <div>
+        <span class="case-label">Case Study · Systems Integration &amp; Governance</span>
+        <h3>Ellucian Colleague SIS Modernization</h3>
+        <p>As PNWU's Interim ERP Program Director / SIS Modernization Project Director, I serve as the university's owner representative and project manager for a $3.37M, five-year (FY2025 to 2030) replacement of its student information system, migrating from PowerCampus to Ellucian Colleague SaaS across a three-party delivery model with Ellucian and Ferrilli. It's the second time I've held this kind of client-side SIS mandate: earlier in my career I was the University of Kansas Medical Center's co-executive sponsor for its student information systems (PeopleSoft SIS) for eight years.</p>
+        <ul>
+          <li>Co-chair the SIS Steering Committee and coordinate the SIS/ERP Executive Committee, running monthly governance across roughly 20 institutional systems and 20-plus stakeholders.</li>
+          <li>Negotiated a scope-reduction change order that shifted 1,300 hours of integration work to the implementation partner, protecting the delivery timeline.</li>
+          <li>Guided PNWU through an aggressive go-live timeline while identifying a gap the original scope missed: a full Paylocity integration that automates LDAP network account creation as staff are hired, instead of a manual process.</li>
+          <li>Ran a competitive vendor selection for a forms platform to integrate with every ERP PNWU runs, including Kuali Build, and am now leading a similar selection for a new payment gateway provider.</li>
+          <li>Introduced a UAT methodology across every functional area (validation plans, functional review guides, sign-off documentation) and built the data governance framework behind the PowerCampus-to-Colleague migration.</li>
+          <li>System portfolio spans Ellucian Platforms (Colleague SIS) and PeopleSoft SIS, tied together through Ethos integration middleware, from a single-instance SIS up to a full enterprise ERP suite.</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">Ellucian Platforms</span>
+          <span class="tag">Colleague SIS</span>
+          <span class="tag">PeopleSoft SIS</span>
+          <span class="tag">Ethos Integration</span>
+          <span class="tag">Paylocity</span>
+          <span class="tag">UAT methodology</span>
+        </div>
+      </div>
+      <div class="case-figure">
+        <div style="text-align:center; padding:20px 10px;">
+          <div style="font-family:'Fraunces',serif; font-size:2.2rem; color:var(--brass-strong); line-height:1.15;" class="num">75</div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:.78rem; color:var(--ink-soft); margin-top:6px;">active UAT validation plans drafted since July 2025</div>
+          <div style="height:1px; background:var(--paper-line); margin:20px 0;"></div>
+          <div style="font-family:'Fraunces',serif; font-size:1.4rem; color:var(--ink);" class="num">381</div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:.78rem; color:var(--ink-soft); margin-top:4px;">UAT &amp; data-testing steps tracked in the SharePoint/Power BI ecosystem</div>
+        </div>
+        <div class="sample-mini">
+          <span class="case-label">Illustrative Sample</span>
+          <p class="sample-mini-title">SIS Modernization Executive Dashboard</p>
+          <p>Power BI-style KPI tiles, narrative panel, and status charts. Fictional data.</p>
+          <a class="sample-link" href="samples/dashboard.html" target="_blank" rel="noopener">Open sample ↗</a>
+        </div>
+        <div class="sample-mini">
+          <span class="case-label">Illustrative Sample</span>
+          <p class="sample-mini-title">UAT Final Report &amp; Sign-Off Guide</p>
+          <p>Test coverage by functional area, issue tracking, and the sign-off pathway to go-live.</p>
+          <a class="sample-link" href="samples/uat-report.html" target="_blank" rel="noopener">Open sample ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="case">
+      <div>
+        <span class="case-label">Case Study · Data, Analytics, AI &amp; Applied Statistics</span>
+        <h3>Agentic AI Tooling, Institutional Research &amp; Doctoral Statistics</h3>
+        <p>A PhD in Educational Psychology (Research, Measurement and Statistics) runs underneath all of this: I build the AI tooling and dashboards that turn a university's own data into a decision, and I teach the statistics that stand behind them.</p>
+        <ul>
+          <li>Built agentic AI reporting and automation on PNWU's SharePoint, Power BI, and Power Platform stack (Claude Enterprise, Cowork, Copilot): live dashboards, an entry-grid generator, and an Integration Master system, no new licensing required.</li>
+          <li>Separately built an interactive dashboard benchmarking PNWU's non-instructional staffing ratios against roughly 5,800 IPEDS-reporting institutions, with a dynamic peer-picker and enrollment-scenario slider.</li>
+          <li>Teach statistics and research methods in St. Martin's University's doctoral research sequence using SPSS, continuing instruction since 2011 at four institutions, including the University of Kansas Medical Center and Washington State University.</li>
+          <li>Independently consult with doctoral students on dissertation research design and statistical analysis since 2018, alongside contract engagements in student success assessment strategy and data-informed decision frameworks.</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">Agentic AI / LLM tooling</span>
+          <span class="tag">Power BI / DAX</span>
+          <span class="tag">Power Platform</span>
+          <span class="tag">SPSS</span>
+          <span class="tag">Doctoral statistics instruction</span>
+        </div>
+      </div>
+      <div class="case-figure">
+        <div style="text-align:center; padding:20px 10px;">
+          <div style="font-family:'Fraunces',serif; font-size:2.2rem; color:var(--brass-strong); line-height:1.15;" class="num">6</div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:.78rem; color:var(--ink-soft); margin-top:6px;">governance decisions logged in the AI-assisted Decision Registry</div>
+          <div style="height:1px; background:var(--paper-line); margin:20px 0;"></div>
+          <div style="font-family:'Fraunces',serif; font-size:1.4rem; color:var(--ink);" class="num">1,600+</div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:.78rem; color:var(--ink-soft); margin-top:4px;">faculty &amp; staff records converted from the legacy SIS, tracked through the same tooling</div>
+        </div>
+        <div class="sample-mini">
+          <span class="case-label">Illustrative Sample</span>
+          <p class="sample-mini-title">Agentic AI &amp; Governance Decision Log</p>
+          <p>Every AI-assisted workflow or governance call, logged with rationale, owner, and status.</p>
+          <a class="sample-link" href="samples/decision-registry.html" target="_blank" rel="noopener">Open sample ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="case">
+      <div>
+        <span class="case-label">Case Study · Strategic Planning &amp; Executive Governance</span>
+        <h3>Board-Approved Plans &amp; Steering Committee Governance</h3>
+        <p>Strategic plans and governance structures are only as good as the room that approves them. I've helped build both ends of that, working alongside campus leadership, planning teams, and steering committees: the plan a board will actually approve, and the committee structure that keeps a multi-vendor project accountable to it. This spans three institution types: a public community college (KCKCC), a private graduate health sciences university (PNWU), and a public regional university (WSU Tri-Cities).</p>
+        <ul>
+          <li>At Kansas City Kansas Community College, led the cross-functional planning process that built and secured Board approval for a five-year Strategic Enrollment Management Plan within my first year, then worked with division leaders to stand up division-wide KPIs and an integrated strategic map.</li>
+          <li>At PNWU, co-chair the SIS Steering Committee and coordinate the SIS/ERP Executive Committee, running monthly governance with 20-plus cross-functional stakeholders and delivering executive briefings to the President and Chief of Staff.</li>
+          <li>At WSU Tri-Cities, chaired the IT Strategic Advisory Student Subcommittee while serving as campus CIO, aligning technology strategy with campus and system leadership.</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">Board-approved SEM plans</span>
+          <span class="tag">Steering committee design</span>
+          <span class="tag">Executive briefings</span>
+        </div>
+        <p style="margin-top:12px; font-size:.85rem;">Reference document: <a href="documents/KCKCC_Strategic_Enrollment_Management_Plan.pdf" target="_blank" rel="noopener">KCKCC 5-Year SEM Plan (PDF)</a></p>
+      </div>
+      <div class="case-figure">
+        <div style="text-align:center; padding:20px 10px;">
+          <div style="font-family:'Fraunces',serif; font-size:2.2rem; color:var(--brass-strong); line-height:1.15;">&lt; 1 year</div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:.78rem; color:var(--ink-soft); margin-top:6px;">from arrival to a Board-approved 5-year SEM Plan, KCKCC</div>
+          <div style="height:1px; background:var(--paper-line); margin:20px 0;"></div>
+          <div style="font-family:'Fraunces',serif; font-size:1.4rem; color:var(--ink);">20+ stakeholders</div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:.78rem; color:var(--ink-soft); margin-top:4px;">monthly SIS/ERP Executive Committee governance, PNWU</div>
+        </div>
+        <div class="sample-mini">
+          <span class="case-label">Illustrative Sample</span>
+          <p class="sample-mini-title">Strategic Planning &amp; Executive Governance Charter</p>
+          <p>Scope, governance structure, milestones, and success metrics for a strategic-plan initiative.</p>
+          <a class="sample-link" href="samples/governance-charter.html" target="_blank" rel="noopener">Open sample ↗</a>
+        </div>
+        <div class="sample-mini">
+          <span class="case-label">Illustrative Sample</span>
+          <p class="sample-mini-title">Strategic Map</p>
+          <p>One-page pillars, targets, and metrics translation of a five-year strategic plan.</p>
+          <a class="sample-link" href="samples/strategic-map.html" target="_blank" rel="noopener">Open sample ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="case">
+      <div>
+        <span class="case-label">Case Study · Student Affairs &amp; Enrollment Management</span>
+        <h3>Chief Student Affairs &amp; Enrollment Officer, Two Institutions</h3>
+        <p>Before the SIS and ERP work, I spent two decades leading the student-facing side of higher education in partnership with admissions, enrollment, and student affairs teams: admissions, registrar, financial aid, housing, athletics, counseling, and career services, twice as chief student affairs and enrollment officer, across two different institution types: a public community college and a public regional four-year university.</p>
+        <ul>
+          <li>At WSU Tri-Cities, a public regional four-year university, I led the division that grew FTE enrollment 38% to an all-time high of 1,868 students over six years, and worked with students and campus leadership to deliver a $7.5M Student Union Building through two student fee referendums, construction, and operation.</li>
+          <li>Tuition and fee governance runs throughout this work: chaired WSU Tri-Cities' student fee committee, securing $400,000-plus annually for student programs, and served on KU Medical Center's Tuition and Fees Policy Committee.</li>
+          <li>At KCKCC, a public community college, led the team that built and delivered a Board-approved five-year SEM Plan within my first year; the division then posted Fall 2023 results against it: headcount up 2.8%, FTE up 1.9%, and new student enrollment up 8.5% year over year.</li>
+          <li>Direct oversight there included Student Activities (student government and campus organizations), a new Basic Needs Center, and the $20M, 254-bed residence hall's opening to full occupancy in year one.</li>
+          <li>Recognized nationally for this work: NASPA Pillar of the Profession, American Council on Education Fellow, and NASPA Board of Directors, Region V.</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">SEM planning</span>
+          <span class="tag">Enrollment growth</span>
+          <span class="tag">Tuition &amp; fee governance</span>
+          <span class="tag">Student governance</span>
+          <span class="tag">Student union &amp; housing capital projects</span>
+        </div>
+        <p style="margin-top:12px; font-size:.85rem;">Reference document: <a href="documents/KCKCC_Strategic_Enrollment_Management_Plan.pdf" target="_blank" rel="noopener">KCKCC SEM Plan (PDF)</a></p>
+      </div>
+      <div class="case-figure">
+        <svg viewBox="0 0 320 190" role="img" aria-label="Two enrollment outcomes: FTE enrollment at WSU Tri-Cities grew 38 percent to an all-time high of 1,868 students; new student enrollment at KCKCC grew 8.5 percent in Fall 2023 versus Fall 2022.">
+          <style>
+            .axlbl2{font:500 10.5px 'IBM Plex Mono',monospace; fill:var(--ink-soft);}
+            .rowlbl2{font:600 12px 'Source Sans 3',sans-serif; fill:var(--ink);}
+            .val2{font:600 12px 'IBM Plex Mono',monospace; fill:var(--brass-strong);}
+          </style>
+          <text x="10" y="18" class="rowlbl2">WSU Tri-Cities FTE (Fall 2014 → Fall 2020)</text>
+          <rect x="10" y="26" width="280" height="14" rx="7" fill="var(--track)"/>
+          <rect x="10" y="26" width="280" height="14" rx="7" fill="var(--brass)" opacity="0.9" clip-path="inset(0 96 0 0 round 7px)"/>
+          <text x="196" y="37" class="val2">+38% FTE</text>
+          <text x="10" y="60" class="axlbl2">All-time high: 1,868 students</text>
+
+          <text x="10" y="110" class="rowlbl2">KCKCC new student enrollment (Fall 2022 → Fall 2023)</text>
+          <rect x="10" y="118" width="280" height="14" rx="7" fill="var(--track)"/>
+          <rect x="10" y="118" width="280" height="14" rx="7" fill="var(--brass)" opacity="0.9" clip-path="inset(0 256 0 0 round 7px)"/>
+          <text x="55" y="129" class="val2">+8.5%</text>
+          <text x="10" y="152" class="axlbl2">Board-approved SEM Plan delivered within year one</text>
+        </svg>
+        <div class="sample-mini">
+          <span class="case-label">Illustrative Sample</span>
+          <p class="sample-mini-title">Strategic Enrollment Management Charter</p>
+          <p>Governance council, milestones to Board approval, and success metrics for a SEM plan build.</p>
+          <a class="sample-link" href="samples/sem-charter.html" target="_blank" rel="noopener">Open sample ↗</a>
+        </div>
+        <div class="sample-mini">
+          <span class="case-label">Illustrative Sample</span>
+          <p class="sample-mini-title">Student Affairs Playbook</p>
+          <p>Functional-area ownership, operating cadence, and escalation protocols in one shared reference.</p>
+          <a class="sample-link" href="samples/student-affairs-playbook.html" target="_blank" rel="noopener">Open sample ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="divider">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">How I Work</p>
+      <h2>Three habits behind all of it</h2>
+    </div>
+    <div class="principles">
+      <div class="principle"><p>"Translate between the room that owns the budget and the room that owns the schema."</p></div>
+      <div class="principle"><p>"For the student: design for their needs first, then build the process around it."</p></div>
+      <div class="principle"><p>"If I build a tool once, I build it so it still works the tenth time, without me in the room."</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="divider" id="education">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Education</p>
+      <h2>Background</h2>
+    </div>
+    <div class="edu-row">
+      <span class="deg">PhD, Educational Psychology</span>
+      <span class="inst">Research, Measurement &amp; Statistics · University of Kansas</span>
+    </div>
+    <div class="edu-row">
+      <span class="deg">MS, Educational Administration; BA, Chemistry</span>
+      <span class="inst">Fort Hays State University</span>
+    </div>
+    <div class="edu-row">
+      <span class="deg">Certificate, Institute for Educational Management</span>
+      <span class="inst">Harvard University Graduate School of Education</span>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div>
+      <h2 style="font-size:1.5rem;">Get in touch.</h2>
+      <p style="margin-top:8px;">Open to conversations about data &amp; AI strategy, systems leadership, and strategic planning roles in higher education.</p>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="mailto:chrismeiers@gmail.com">chrismeiers@gmail.com</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/chrismeiersphd/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
