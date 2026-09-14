@@ -83,7 +83,7 @@ Email / LinkedIn CTAs.
   - Case 4 (Student Affairs): one box for the WSU Tri-Cities Student Affairs Playbook, in place of the removed SVG, above the existing mocked operations SharePoint box.
   - The KCKCC SEM Plan is now referenced only on Case 3 (previously duplicated on both Case 3 and Case 4).
 - Trimmed Case 4's bullet list from 5 bullets to 3 at Chris's request: merged the WSU fee-committee point into the enrollment/Student-Union bullet, merged KCKCC's operational oversight (Student Activities, Basic Needs Center, residence hall) into the SEM-Plan-results bullet, and merged tuition-governance breadth with the national-recognition line into one closing bullet. No facts dropped.
-- **Still open:** none of this (or the Version 10 decision-registry/UAT rebuild) has been synced into `~/Documents/GitHub/portfolio/` or pushed yet — confirmed the live GitHub Pages site is still serving the pre-Version-10 decision registry and UAT sample. Chris needs to do one sync + commit + push covering both Version 10 and Version 11.
+- **Resolved:** synced into `~/Documents/GitHub/portfolio/` and committed locally (commit `adc9ef9`, on top of the still-unpushed Version 10 commit `6b54087`) — this covers both Version 10 and Version 11 in one push. **Still open:** the push itself. Git push from this sandboxed session fails (`could not read Username for 'https://github.com': terminal prompts disabled` — no credential helper or `gh` CLI available here). Chris needs to run `git push` from a real terminal on his Mac (`cd ~/Documents/GitHub/portfolio && git push`); it's a plain fast-forward push of 2 commits, no conflicts.
 
 ## Notes on the prior pass (Version 8 → 9)
 
