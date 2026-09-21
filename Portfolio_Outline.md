@@ -66,6 +66,27 @@ Email / LinkedIn CTAs.
 - Em-dashes removed throughout the portfolio copy and the sample HTML pages (replaced with commas, colons, or "·").
 - Chris has already initialized a git repository at `~/Documents/GitHub/portfolio` (with a remote `origin` configured) — the GitHub Pages push itself is his to continue.
 
+## Notes on this edit pass (Version 15 -> 16): consistency sweep before sending the link
+
+Applied 2026-09-21, 8:15 AM, reviewing the Version 15 hand edits against the panel critique.
+
+**Two fixes, both consequences of the Version 15 pass rather than new problems**
+
+- **The stat caption contradicted the softened bullet.** Version 15 correctly changed the Case 1 bullet to "restructured 1,300 hours of integration work" so a Ferrilli reader is not told that work was pushed onto their firm. The stat block caption beside it still read "hours of integration work moved to the implementation partner in one negotiated change order", in the largest type on that card. Now reads "hours of integration work restructured in one negotiated change order, protecting the go-live date." The standing Ferrilli-reader rule should be applied to stat captions and image alt text, not just body copy.
+- **Three dates in one clause.** The Case 1 opener ran "six years (2008 to 2014) ... a project I started there in 2000 during an earlier tenure", which made the reader reconstruct the chronology. Reordered to run forward, same three facts: "I started the University of Kansas Medical Center's PeopleSoft SIS project in 2000, during an earlier tenure there, and came back as its co-executive sponsor from 2008 to 2014."
+
+**Correction to the Version 15 sync note**
+
+That note says `~/Career & Job Search` on the Mac is EMPTY and the Drive source of truth could not be found. That path is wrong, not missing. The real location is:
+
+`/Users/chrismeiers/Library/CloudStorage/GoogleDrive-chrismeiers@gmail.com/My Drive/Career & Job Search/career/07_portfolio`
+
+It is connected to this session and has always had the files. Because Version 15 was written directly into `~/Documents/GitHub/portfolio`, the two copies had drifted. `index.html`, `Portfolio_Outline.md`, `samples/`, and `og-card.png` were copied GitHub -> Drive in this pass and the two are now identical. Going forward, edit one and copy to the other in the same pass, whichever direction.
+
+**Verification run on the Version 15 page**: tag balance clean (div/section/ul/li/p/h3 all matched), 0 em dashes, 0 instances of "agentic", "St. Martin" fully replaced by "Saint Martin", no remaining "eight years" or "8 years" for KUMC.
+
+**Still not pushed.** As of this pass the live GitHub Pages site is still serving the pre-Version-14 page: eyebrow "Higher Education Executive Leadership", the old tagline, and "agentic" throughout. Anyone given the portfolio link right now sees that version. The push needs Chris's own Terminal (`cd ~/Documents/GitHub/portfolio && git push`); there is no `gh` CLI and no credential helper in the device shell.
+
 ## Notes on this edit pass (Version 14 -> 15): Ferrilli audience fix and role dates
 
 Applied 2026-09-21 ahead of a 10:00 AM follow-up call with Eric Birkelbach, a recruiter at Ferrilli. This pass ran concurrently with the tech-forward reweight below and was re-applied on top of it after a collision (see "Concurrency note").
