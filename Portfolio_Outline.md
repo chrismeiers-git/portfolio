@@ -66,6 +66,43 @@ Email / LinkedIn CTAs.
 - Em-dashes removed throughout the portfolio copy and the sample HTML pages (replaced with commas, colons, or "·").
 - Chris has already initialized a git repository at `~/Documents/GitHub/portfolio` (with a remote `origin` configured) — the GitHub Pages push itself is his to continue.
 
+## Notes on this edit pass (Version 14 -> 15): Ferrilli audience fix and role dates
+
+Applied 2026-09-21 ahead of a 10:00 AM follow-up call with Eric Birkelbach, a recruiter at Ferrilli. This pass ran concurrently with the tech-forward reweight below and was re-applied on top of it after a collision (see "Concurrency note").
+
+**Audience fit, the reason for the pass**
+
+- The Case 1 change-order bullet read "Negotiated a scope-reduction change order that moved 1,300 hours of integration work to the implementation partner." Ferrilli IS the implementation partner, so to a Ferrilli reader that says "I moved 1,300 hours of unscoped work onto your firm and counted it as a win." Now reads "Negotiated a change order that restructured 1,300 hours of integration work, protecting the delivery timeline through an aggressive go-live schedule." Same accomplishment, no attribution of the burden.
+- The neutral "three-party delivery model with Ellucian and Ferrilli" mentions in the hero and Case 1 were left alone; they read well and show prior work alongside them.
+- **Standing rule:** before sending the portfolio link to anyone at Ellucian, Ferrilli, Kuali, Nelnet, or Paylocity, reread every mention of that firm as that reader.
+
+**Role dates added** (Chris supplied these directly)
+
+- Hero chip: PNWU, 2025 to present.
+- KCKCC: 2022 to 2024.
+- WSU Tri-Cities: 2014 to 2022.
+- Also on record but not yet placed on the page: UMKC 2002 to 2004, during the PeopleSoft project.
+
+**Mechanics**
+
+- "St. Martin's University" to "Saint Martin's University" (official name).
+- "20-plus stakeholders" to "20+ stakeholders" in both places, matching the stat block.
+- Quotation marks removed from the two How I Work principles. They were Chris quoting himself with no attribution, which reads as generated.
+
+**UNRESOLVED, blocking full date coverage**
+
+- **The KU Medical Center tenure contradicts itself.** The page claims "eight years" as co-executive sponsor in three places (Case 1 body, the Case 4 lead paragraph, and the "8 years" stat block), but the dates Chris gave are 2008 to 2014, which is six. No KUMC dates were added and the "eight years" claims were left untouched, rather than publish a visible contradiction. Chris to confirm which is right, then the dates and the count can go in together.
+- **"Two major SIS implementations, twenty-plus years apart" depends on the above.** If the KUMC mandate began in 2008 and PNWU in 2025, the gap is 17 years, not twenty-plus. Left unchanged pending the KUMC answer. If the span is meant to run from UMKC in 2002, twenty-plus is correct and should say so.
+
+**Concurrency note, worth remembering**
+
+Two Claude sessions edited this repo within the same ten minutes. Commit 23acdb5 ("Add WSU Tri-Cities date range") is mislabeled: the other session overwrote index.html between this session's write and its commit, so that commit actually reverted the first copy pass instead of adding dates. The work was recovered from 30be0cb and re-applied onto the reweighted page as cf0d2be. Nothing was lost. Lesson for future passes: in this repo, re-verify file contents immediately before committing, not just after writing, and commit explicit paths rather than staged state.
+
+**Sync state**
+
+- Edited directly in `~/Documents/GitHub/portfolio/`. Not yet pushed at time of writing; the push needs Chris's GitHub credentials from his own Terminal.
+- `~/Career & Job Search` on the Mac is EMPTY, so the Drive source of truth is not at the path the `web-portfolio` skill records. Its real location needs to be confirmed before anything can be synced back.
+
 ## Notes on this edit pass (Version 13 -> 14): tech-forward reweight
 
 Driven by a four-expert panel review (implementation-partner exec, executive brand strategist, higher-ed CIO / EdTech product leader, LinkedIn/B2B strategist). Goal set by Chris: technology reads as the primary interest, vendor side or client side, without saying so; custom AI-built project management tooling becomes the hook; Ferrilli-tuned now, LinkedIn generalization pass still to come.
