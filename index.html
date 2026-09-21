@@ -121,6 +121,9 @@
     color:var(--ink-soft);
     white-space:nowrap;
   }
+  @media (max-width: 640px){
+    .chip{ white-space:normal; max-width:100%; }
+  }
   h1.name{font-size:clamp(2.1rem, 5vw, 3.1rem); line-height:1.08;}
   .tagline{font-size:1.18rem; margin-top:16px; max-width:56ch; color:var(--ink-soft);}
   .cta-row{display:flex; gap:12px; flex-wrap:wrap; margin-top:24px;}
@@ -315,13 +318,15 @@
 
 <header class="hero">
   <div class="wrap">
-    <p class="eyebrow">Portfolio · Higher Education Executive Leadership</p>
+    <p class="eyebrow">Portfolio · Higher Education ERP &amp; SIS Modernization</p>
     <h1 class="name">Chris Meiers, PhD</h1>
-    <p class="tagline">Higher education executive with 25 years across student affairs, enrollment management, registrar services, and technology. I currently direct a university's full ERP (enterprise resource planning) and SIS (student information system) modernization, along with the AI tooling and governance that support it.</p>
+    <p class="tagline">I direct a $3.37M, five-year replacement of a university's student information system, PowerCampus to Ellucian Colleague SaaS, on a three-party delivery model with Ellucian and Ferrilli. Nobody sells project management tooling shaped like that program. So I built it, on the licenses the university already owns.</p>
+    <p class="tagline" style="font-size:.98rem; color:var(--ink-soft); margin-top:-6px;">Before this, two decades running the offices on the other side of the integration: admissions, registrar, financial aid, student affairs. I know what the data has to do when it lands.</p>
     <div class="hero-meta">
       <span class="chip">ERP Program Director / SIS Modernization Project Director · PNWU</span>
+      <span class="chip">Ellucian Colleague · PeopleSoft SIS · Ethos</span>
       <span class="chip">PhD, Educational Psychology · University of Kansas</span>
-      <span class="chip">ACE Fellow · NASPA Pillar of the Profession</span>
+      <span class="chip">ACE Fellow</span>
     </div>
     <div class="cta-row">
       <a class="btn btn-primary" href="mailto:chrismeiers@gmail.com">Email Chris</a>
@@ -332,7 +337,7 @@
 
 <section id="about">
   <div class="wrap">
-    <p style="max-width:64ch; font-size:1.02rem;">Across six institutions, I've led or worked in nearly every major function a university runs: admissions, registrar, financial aid, student affairs, IT, housing, athletics, research, and teaching. Across all of it, I translate between the people who own the budget and the people who own the data, and build something durable enough to outlast the project.</p>
+    <p style="max-width:64ch; font-size:1.02rem;">Eight years co-sponsoring a PeopleSoft SIS implementation at a medical center, two decades running the offices that live inside systems like it, and now directing the replacement of one. Six institutions, and I've led or worked in most of what a university runs: admissions, registrar, financial aid, student affairs, IT, housing, athletics, research, and teaching. That's why the integration conversations go faster. I know what financial aid actually does with the data, so I know when a functional lead says yes to a design they'll regret in year two. I translate between the room that owns the budget and the room that owns the schema.</p>
   </div>
 </section>
 
@@ -340,52 +345,52 @@
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow">Capabilities</p>
-      <h2>What I do</h2>
+      <h2>What I actually do on a program</h2>
     </div>
     <div class="pillars">
       <div class="pillar">
-        <h3>Data, Analytics, AI &amp; Applied Statistics</h3>
-        <p>Institutional research and agentic AI tooling built for how a university actually decides things, using Power BI, SharePoint, the Power Platform, and SPSS, grounded in a PhD in applied statistics and doctoral-level teaching.</p>
+        <h3>ERP &amp; SIS Program Delivery</h3>
+        <p>Client-side leadership of two major SIS implementations, twenty-plus years apart, at different institution types. Owner representative on the current one: scope, change orders, the integration inventory, go-live readiness, and the three-party relationship with the software vendor and the implementation partner.</p>
         <div class="tags">
-          <span class="tag">Claude Enterprise / Cowork</span>
-          <span class="tag">Power BI / DAX</span>
-          <span class="tag">Power Platform (Power Apps/Automate)</span>
-          <span class="tag">SharePoint</span>
-          <span class="tag">SPSS</span>
-          <span class="tag">Applied statistics (PhD)</span>
-        </div>
-      </div>
-      <div class="pillar">
-        <h3>Enterprise Systems &amp; ERP/SIS Integration</h3>
-        <p>Client-side leadership of two major SIS implementations, 20 years apart, at different institution types, with a systems portfolio spanning legacy single-instance SIS up through full enterprise suites and third-party ERP integrations.</p>
-        <div class="tags">
-          <span class="tag">Ellucian Platforms</span>
-          <span class="tag">Colleague SIS</span>
+          <span class="tag">Ellucian Colleague SIS</span>
           <span class="tag">PeopleSoft SIS</span>
           <span class="tag">Ethos Integration</span>
+          <span class="tag">PowerCampus conversion</span>
           <span class="tag">Paylocity / LDAP integration</span>
           <span class="tag">Kuali Build</span>
         </div>
       </div>
       <div class="pillar">
-        <h3>Strategic Planning &amp; Executive Governance</h3>
-        <p>Steering committees, board-approved plans, and the executive reporting that keeps leadership and a board aligned on scope, built across three institution types: community college, private health sciences university, and public regional university.</p>
+        <h3>AI-Built Project &amp; Program Tooling</h3>
+        <p>The project office runs on software I build myself, inside the M365 tenant the university already pays for: UAT plan generation and tracking, an integration master, a decision registry, conversion entry grids. No new vendor, no new license line, no data leaving the tenant.</p>
         <div class="tags">
-          <span class="tag">Steering committees</span>
-          <span class="tag">Board-approved plans</span>
-          <span class="tag">Executive reporting</span>
-          <span class="tag">Cross-institution-type</span>
+          <span class="tag">Claude Enterprise / Cowork</span>
+          <span class="tag">Microsoft Copilot</span>
+          <span class="tag">Power Platform (Power Apps/Automate)</span>
+          <span class="tag">SharePoint</span>
+          <span class="tag">Power BI / DAX</span>
         </div>
       </div>
       <div class="pillar">
-        <h3>Student Affairs &amp; Enrollment Management</h3>
-        <p>Chief student affairs and enrollment officer at two institutions, a community college and a regional public university, with enrollment growth, tuition and fee governance, student governance oversight, capital projects, and board-approved SEM plans to show for it.</p>
+        <h3>Data, Measurement &amp; Institutional Research</h3>
+        <p>Benchmarking, reporting, and the measurement discipline underneath both, grounded in a PhD in research, measurement and statistics and in doctoral-level teaching I still do.</p>
         <div class="tags">
+          <span class="tag">Power BI / DAX</span>
+          <span class="tag">IPEDS benchmarking</span>
+          <span class="tag">SPSS</span>
+          <span class="tag">Applied statistics (PhD)</span>
+          <span class="tag">Doctoral instruction</span>
+        </div>
+      </div>
+      <div class="pillar">
+        <h3>Governance, Sponsorship &amp; Operational Depth</h3>
+        <p>Steering committees, executive sponsorship, and board-approved plans, plus two decades as a chief student affairs and enrollment officer. That last part is the reason I already know the business process on the other side of the integration.</p>
+        <div class="tags">
+          <span class="tag">Steering committees</span>
+          <span class="tag">Executive sponsorship</span>
+          <span class="tag">Board-approved plans</span>
+          <span class="tag">Executive briefings</span>
           <span class="tag">SEM planning</span>
-          <span class="tag">Enrollment growth</span>
-          <span class="tag">Tuition &amp; fee governance</span>
-          <span class="tag">Student governance</span>
-          <span class="tag">Capital projects</span>
         </div>
       </div>
     </div>
@@ -396,42 +401,43 @@
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow">Featured Work</p>
-      <h2>Four projects in detail</h2>
-      <p>Each of these started as spreadsheets, meetings, or manual review, and became a system someone else could run.</p>
+      <h2>Four programs, and what I built inside them</h2>
+      <p>Each of these started as a mess of spreadsheets, meetings, or manual review, and ended as a system someone else could run without me in the room.</p>
     </div>
 
     <div class="case">
       <div>
-        <span class="case-label">Case Study · Systems Integration &amp; Governance</span>
-        <h3>Ellucian Colleague SIS Modernization</h3>
-        <p>As PNWU's ERP Program Director / SIS Modernization Project Director, I serve as the university's owner representative and project manager for a $3.37M, five-year (FY2025 to 2030) replacement of its student information system, migrating from PowerCampus to Ellucian Colleague SaaS across a three-party delivery model with Ellucian and Ferrilli. It's the second time I've held this kind of client-side SIS mandate: earlier in my career I was the University of Kansas Medical Center's co-executive sponsor for its student information systems (PeopleSoft SIS) for eight years.</p>
+        <span class="case-label">Case Study · ERP &amp; SIS Program Delivery</span>
+        <h3>Ellucian Colleague SIS Modernization, $3.37M, Five Years</h3>
+        <p>As PNWU's ERP Program Director / SIS Modernization Project Director, I'm the university's owner representative and project manager for a $3.37M, five-year (FY2025 to 2030) replacement of its student information system, migrating from PowerCampus to Ellucian Colleague SaaS across a three-party delivery model with Ellucian and Ferrilli. Second time I've held a client-side SIS mandate. The first was eight years as the University of Kansas Medical Center's co-executive sponsor for PeopleSoft SIS.</p>
         <ul>
-          <li>Co-chair the SIS Steering Committee and coordinate the SIS/ERP Executive Committee, running monthly governance across roughly 20 institutional systems and 20+ stakeholders; system portfolio spans Ellucian Platforms (Colleague SIS) and PeopleSoft SIS, tied together through Ethos integration middleware, from a single-instance SIS up to a full enterprise ERP suite.</li>
-          <li>Negotiated a change order that restructured 1,300 hours of integration work and protected the delivery timeline, and guided PNWU through an aggressive go-live schedule while identifying a gap the original scope missed: a full Paylocity integration that automates LDAP network account creation as staff are hired, instead of a manual process.</li>
-          <li>Ran a competitive vendor selection for a forms platform to integrate with every ERP PNWU runs, including Kuali Build, and am now leading a similar selection for a new payment gateway provider.</li>
-          <li>Introduced a UAT methodology across every functional area (validation plans, functional review guides, sign-off documentation) and built the data governance framework behind the PowerCampus-to-Colleague migration.</li>
+          <li>Negotiated a scope-reduction change order that moved 1,300 hours of integration work to the implementation partner, protecting the delivery timeline through an aggressive go-live schedule.</li>
+          <li>Caught an integration the original scope missed: a full Paylocity feed that creates the LDAP network account as staff are hired, replacing a manual process. Found before go-live, not after.</li>
+          <li>Co-chair the SIS Steering Committee and coordinate the SIS/ERP Executive Committee, running monthly governance across roughly 20 institutional systems and 20-plus stakeholders, with Ellucian Colleague and PeopleSoft tied together through Ethos integration middleware.</li>
+          <li>Ran a competitive vendor selection for a forms platform that integrates with every ERP PNWU runs, including Kuali Build, and am leading a similar selection now for a payment gateway provider.</li>
+          <li>Wrote the UAT methodology used across every functional area: validation plans, functional review guides, sign-off documentation, plus the field-level ownership and crosswalk sign-off behind the PowerCampus-to-Colleague conversion.</li>
         </ul>
         <div class="tags">
-          <span class="tag">Ellucian Platforms</span>
-          <span class="tag">Colleague SIS</span>
+          <span class="tag">Ellucian Colleague SIS</span>
           <span class="tag">PeopleSoft SIS</span>
           <span class="tag">Ethos Integration</span>
-          <span class="tag">Paylocity</span>
-          <span class="tag">UAT methodology</span>
+          <span class="tag">PowerCampus conversion</span>
+          <span class="tag">Paylocity / LDAP</span>
+          <span class="tag">Change orders &amp; vendor selection</span>
         </div>
       </div>
       <div class="case-figure">
         <div style="text-align:center; padding:20px 10px;">
-          <div style="font-family:'Fraunces',serif; font-size:2.2rem; color:var(--brass-strong); line-height:1.15;" class="num">75</div>
-          <div style="font-family:'IBM Plex Mono',monospace; font-size:.78rem; color:var(--ink-soft); margin-top:6px;">active UAT validation plans drafted since July 2025</div>
+          <div style="font-family:'Fraunces',serif; font-size:2.2rem; color:var(--brass-strong); line-height:1.15;" class="num">1,300</div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:.78rem; color:var(--ink-soft); margin-top:6px;">hours of integration work moved to the implementation partner in one negotiated change order</div>
           <div style="height:1px; background:var(--paper-line); margin:20px 0;"></div>
-          <div style="font-family:'Fraunces',serif; font-size:1.4rem; color:var(--ink);" class="num">381</div>
-          <div style="font-family:'IBM Plex Mono',monospace; font-size:.78rem; color:var(--ink-soft); margin-top:4px;">UAT &amp; data-testing steps tracked in the SharePoint/Power BI ecosystem</div>
+          <div style="font-family:'Fraunces',serif; font-size:1.4rem; color:var(--ink);" class="num">20</div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:.78rem; color:var(--ink-soft); margin-top:4px;">institutional systems in scope, governed monthly with 20-plus stakeholders</div>
         </div>
         <div class="sample-mini">
           <span class="case-label">Illustrative Sample</span>
           <p class="sample-mini-title">SIS Modernization Executive Dashboard</p>
-          <p>Power BI-style KPI tiles, narrative panel, and status charts. Fictional data.</p>
+          <p>Power BI-style KPI tiles, narrative panel, and status charts. Fictional institution and data.</p>
           <a class="sample-link" href="samples/dashboard.html" target="_blank" rel="noopener">Open sample ↗</a>
         </div>
         <div class="sample-mini">
@@ -445,41 +451,43 @@
 
     <div class="case">
       <div>
-        <span class="case-label">Case Study · Data, Analytics, AI &amp; Applied Statistics</span>
-        <h3>Agentic AI Tooling, Institutional Research &amp; Doctoral Statistics</h3>
-        <p>All of this sits on a PhD in Educational Psychology (Research, Measurement and Statistics): I build the AI tooling and dashboards that turn a university's own data into a decision, and I teach the statistics that stand behind them.</p>
+        <span class="case-label">Case Study · AI-Built Project &amp; Program Tooling</span>
+        <h3>The Project Management Tooling I Built Inside the Tenant</h3>
+        <p>Nobody sells a project management tool shaped like this program. Roughly 20 institutional systems, three organizations sharing the work, and a conversion running underneath all of it. So I built what we needed on the SharePoint, Power BI, and Power Platform licenses PNWU already owns, with Claude Enterprise, Cowork, and Copilot doing the generation and the cross-referencing. No new vendor review. No new license line. No data leaving the tenant.</p>
         <ul>
-          <li>Built agentic AI reporting and automation on PNWU's SharePoint, Power BI, and Power Platform stack (Claude Enterprise, Cowork, Copilot): live dashboards, an entry-grid generator, and an Integration Master system, no new licensing required.</li>
-          <li>Separately built an interactive dashboard benchmarking PNWU's non-instructional staffing ratios against roughly 5,800 IPEDS-reporting institutions, with a dynamic peer-picker and enrollment-scenario slider.</li>
-          <li>Teach statistics and research methods in Saint Martin's University's doctoral research sequence using SPSS, continuing instruction since 2011 at four institutions, including the University of Kansas Medical Center and Washington State University.</li>
-          <li>Independently consult with doctoral students on dissertation research design and statistical analysis since 2018, alongside contract engagements in student success assessment strategy and data-informed decision frameworks.</li>
+          <li><strong>UAT plan generation and tracking.</strong> A functional owner gets a validation plan with numbered steps, expected results, and a sign-off block instead of a blank document. 75 active plans and 381 UAT and data-testing steps since July 2025, tracked in SharePoint and rolled up in Power BI so the program can see what's actually been tested.</li>
+          <li><strong>An Integration Master.</strong> Every integration in the program, its owner, its middleware path, and what it depends on, held in one place instead of in three organizations' spreadsheets.</li>
+          <li><strong>An entry-grid generator</strong> behind the conversion work, including the 1,600-plus faculty and staff records moved off the legacy SIS.</li>
+          <li><strong>A Decision Registry.</strong> Every governance call recorded with the question, the options considered, the decision, and who made it, so something settled in month four is still findable and attributable in month thirty.</li>
         </ul>
+        <p>None of it is bespoke to one institution. It's built on the stack most universities already run, and it keeps working when I'm not in the room.</p>
         <div class="tags">
-          <span class="tag">Agentic AI / LLM tooling</span>
+          <span class="tag">Claude Enterprise / Cowork</span>
+          <span class="tag">Microsoft Copilot</span>
+          <span class="tag">Power Platform (Power Apps/Automate)</span>
+          <span class="tag">SharePoint</span>
           <span class="tag">Power BI / DAX</span>
-          <span class="tag">Power Platform</span>
-          <span class="tag">SPSS</span>
-          <span class="tag">Doctoral statistics instruction</span>
+          <span class="tag">No new licensing</span>
         </div>
       </div>
       <div class="case-figure">
         <div style="text-align:center; padding:20px 10px;">
-          <div style="font-family:'Fraunces',serif; font-size:2.2rem; color:var(--brass-strong); line-height:1.15;" class="num">6</div>
-          <div style="font-family:'IBM Plex Mono',monospace; font-size:.78rem; color:var(--ink-soft); margin-top:6px;">governance decisions logged in the AI-assisted Decision Registry</div>
+          <div style="font-family:'Fraunces',serif; font-size:2.2rem; color:var(--brass-strong); line-height:1.15;">$0</div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:.78rem; color:var(--ink-soft); margin-top:6px;">new licensing spend. Built on the M365 tenant the university already pays for</div>
           <div style="height:1px; background:var(--paper-line); margin:20px 0;"></div>
           <div style="font-family:'Fraunces',serif; font-size:1.4rem; color:var(--ink);" class="num">1,600+</div>
           <div style="font-family:'IBM Plex Mono',monospace; font-size:.78rem; color:var(--ink-soft); margin-top:4px;">faculty &amp; staff records converted from the legacy SIS, tracked through the same tooling</div>
         </div>
         <div class="sample-mini">
           <span class="case-label">Illustrative Sample</span>
-          <p class="sample-mini-title">Agentic AI &amp; Governance Decision Log</p>
-          <p>Every AI-assisted workflow or governance call, logged with rationale, owner, and status. Three entries expanded to full write-ups below, toggled by topic.</p>
+          <p class="sample-mini-title">Governance Decision Registry</p>
+          <p>Every governance call logged with rationale, owner, and status. Three entries expanded to full briefing write-ups, toggled by topic.</p>
           <a class="sample-link" href="samples/decision-registry.html" target="_blank" rel="noopener">Open sample ↗</a>
         </div>
         <div class="sample-mini">
           <span class="case-label">Live Tool</span>
           <p class="sample-mini-title">LD 810 Practice Quiz Portal</p>
-          <p>A live practice quiz app I built and maintain for my doctoral statistics students at Saint Martin's University, deployed on GitHub Pages. Real tool, currently in use.</p>
+          <p>The one piece of this I can show publicly: a practice quiz app I built and maintain for my doctoral statistics students, running on GitHub Pages. Same habit, smaller stakes.</p>
           <a class="sample-link" href="https://chrismeiers-git.github.io/ld810/" target="_blank" rel="noopener">Open portal ↗</a>
         </div>
       </div>
@@ -487,27 +495,59 @@
 
     <div class="case">
       <div>
-        <span class="case-label">Case Study · Strategic Planning &amp; Executive Governance</span>
-        <h3>Board-Approved Plans &amp; Steering Committee Governance</h3>
-        <p>I've worked both ends of this, alongside campus leadership, planning teams, and steering committees: the plan a board will actually approve, and the committee structure that keeps a multi-vendor project accountable to it. This spans three institution types: a public community college (KCKCC), a private graduate health sciences university (PNWU), and a public regional university (WSU Tri-Cities).</p>
+        <span class="case-label">Case Study · Data, Measurement &amp; Institutional Research</span>
+        <h3>Benchmarking, Reporting &amp; Doctoral Statistics</h3>
+        <p>A PhD in Educational Psychology (Research, Measurement and Statistics) runs underneath all of it. I build the dashboards that turn a university's own data into a decision, and I teach the statistics that stand behind them.</p>
         <ul>
-          <li>At Kansas City Kansas Community College, led the cross-functional planning process that built and secured Board approval for a five-year Strategic Enrollment Management Plan within my first year, then worked with division leaders to stand up division-wide KPIs and an integrated strategic map.</li>
-          <li>At PNWU, co-chair the SIS Steering Committee and coordinate the SIS/ERP Executive Committee, running monthly governance with 20+ cross-functional stakeholders and delivering executive briefings to the President and Chief of Staff.</li>
-          <li>At WSU Tri-Cities, chaired the IT Strategic Advisory Student Subcommittee while serving as campus CIO, aligning technology strategy with campus and system leadership.</li>
+          <li>Built an interactive dashboard benchmarking PNWU's non-instructional staffing ratios against roughly 5,800 IPEDS-reporting institutions, with a dynamic peer-picker and an enrollment-scenario slider. Ask it who you actually look like, not who you wish you looked like.</li>
+          <li>Teach statistics and research methods in St. Martin's University's doctoral research sequence using SPSS, continuing instruction since 2011 at four institutions, including the University of Kansas Medical Center and Washington State University.</li>
+          <li>Consult independently with doctoral students on dissertation research design and statistical analysis since 2018, alongside contract engagements in student success assessment strategy and data-informed decision frameworks.</li>
         </ul>
         <div class="tags">
-          <span class="tag">Board-approved SEM plans</span>
-          <span class="tag">Steering committee design</span>
-          <span class="tag">Executive briefings</span>
+          <span class="tag">Power BI / DAX</span>
+          <span class="tag">IPEDS benchmarking</span>
+          <span class="tag">SPSS</span>
+          <span class="tag">Applied statistics (PhD)</span>
+          <span class="tag">Doctoral instruction</span>
         </div>
       </div>
       <div class="case-figure">
         <div style="text-align:center; padding:20px 10px;">
-          <div style="font-family:'Fraunces',serif; font-size:2.2rem; color:var(--brass-strong); line-height:1.15;">&lt; 1 year</div>
-          <div style="font-family:'IBM Plex Mono',monospace; font-size:.78rem; color:var(--ink-soft); margin-top:6px;">from arrival to a Board-approved 5-year SEM Plan, KCKCC</div>
+          <div style="font-family:'Fraunces',serif; font-size:2.2rem; color:var(--brass-strong); line-height:1.15;" class="num">5,800</div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:.78rem; color:var(--ink-soft); margin-top:6px;">IPEDS-reporting institutions in the staffing-ratio peer benchmark</div>
           <div style="height:1px; background:var(--paper-line); margin:20px 0;"></div>
-          <div style="font-family:'Fraunces',serif; font-size:1.4rem; color:var(--ink);">20+ stakeholders</div>
-          <div style="font-family:'IBM Plex Mono',monospace; font-size:.78rem; color:var(--ink-soft); margin-top:4px;">monthly SIS/ERP Executive Committee governance, PNWU</div>
+          <div style="font-family:'Fraunces',serif; font-size:1.4rem; color:var(--ink);">Since 2011</div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:.78rem; color:var(--ink-soft); margin-top:4px;">teaching statistics and research methods, four institutions</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case">
+      <div>
+        <span class="case-label">Case Study · Governance, Sponsorship &amp; Operational Depth</span>
+        <h3>Executive Sponsorship, Board-Approved Plans &amp; Enrollment Operations</h3>
+        <p>Before I ran the implementation, I sponsored one, and before that I ran the offices that live inside the system. Eight years as co-executive sponsor for PeopleSoft SIS at KU Medical Center. Two decades as chief student affairs and enrollment officer at two institutions. It's why I read a functional requirement the way the people who have to live with it do.</p>
+        <ul>
+          <li>At Kansas City Kansas Community College, led the cross-functional planning process that built and secured Board approval for a five-year Strategic Enrollment Management Plan within my first year, then worked with division leaders to stand up division-wide KPIs and an integrated strategic map. The division posted Fall 2023 results against it: headcount up 2.8%, FTE up 1.9%, new student enrollment up 8.5% year over year.</li>
+          <li>At WSU Tri-Cities, led the division that grew FTE enrollment 38% to an all-time high of 1,868 students over six years, chaired the student fee committee securing $400,000-plus annually for student programs, and worked with students and campus leadership to deliver a $7.5M Student Union Building through two referendums, construction, and operation. Chaired the IT Strategic Advisory Student Subcommittee while serving as campus CIO.</li>
+          <li>Tuition and fee governance ran throughout, including service on KU Medical Center's Tuition and Fees Policy Committee. Recognized nationally with NASPA Pillar of the Profession, American Council on Education Fellow, and NASPA Board of Directors, Region V.</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">Executive sponsorship</span>
+          <span class="tag">Steering committee design</span>
+          <span class="tag">Board-approved plans</span>
+          <span class="tag">Executive briefings</span>
+          <span class="tag">SEM planning</span>
+          <span class="tag">Tuition &amp; fee governance</span>
+        </div>
+      </div>
+      <div class="case-figure">
+        <div style="text-align:center; padding:20px 10px;">
+          <div style="font-family:'Fraunces',serif; font-size:2.2rem; color:var(--brass-strong); line-height:1.15;">8 years</div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:.78rem; color:var(--ink-soft); margin-top:6px;">co-executive sponsor, PeopleSoft SIS, KU Medical Center</div>
+          <div style="height:1px; background:var(--paper-line); margin:20px 0;"></div>
+          <div style="font-family:'Fraunces',serif; font-size:1.4rem; color:var(--ink);">&lt; 1 year</div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:.78rem; color:var(--ink-soft); margin-top:4px;">from arrival to a Board-approved 5-year SEM Plan, KCKCC</div>
         </div>
         <div class="sample-mini">
           <span class="case-label">Reference Document</span>
@@ -521,63 +561,11 @@
           <p>The real strategic map from my time as campus CIO.</p>
           <a class="sample-link" href="documents/WSUTC_Student_Affairs_Strategic_Map_2014.pdf" target="_blank" rel="noopener">View PDF ↗</a>
         </div>
-        <div class="sp-mock">
-          <span class="case-label">Illustrative Sample</span>
-          <div class="sp-shot">
-            <div class="sp-chrome"><span class="sp-dot"></span><span class="sp-dot"></span><span class="sp-dot"></span><span class="sp-url">portal.roselawnu.edu/sites/strategic-planning</span></div>
-            <div class="sp-head"><span>Strategic Planning &amp; Governance Hub</span><em>SharePoint</em></div>
-            <table class="sp-list">
-              <tr><th>Name</th><th>Type</th><th>Modified</th></tr>
-              <tr><td>Executive Steering Committee: Agendas &amp; Minutes</td><td>Library</td><td>Aug 2026</td></tr>
-              <tr><td>Five-Year Strategic Plan: Working Drafts</td><td>Library</td><td>Jul 2026</td></tr>
-              <tr><td>Division KPI Scorecards</td><td>List</td><td>Monthly</td></tr>
-              <tr><td>Board Committee Briefing Materials</td><td>Library</td><td>Quarterly</td></tr>
-            </table>
-          </div>
-          <p class="sp-cap">Mocked SharePoint site, fictional Roselawn University data, illustrating where this governance work actually lives day to day.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="case">
-      <div>
-        <span class="case-label">Case Study · Student Affairs &amp; Enrollment Management</span>
-        <h3>Chief Student Affairs &amp; Enrollment Officer, Two Institutions</h3>
-        <p>Before the SIS and ERP work, I spent two decades leading the student-facing side of higher education in partnership with admissions, enrollment, and student affairs teams: admissions, registrar, financial aid, housing, athletics, counseling, and career services, twice as chief student affairs and enrollment officer, across two different institution types: a public community college and a public regional four-year university.</p>
-        <ul>
-          <li>At WSU Tri-Cities, a public regional four-year university, I led the division that grew FTE enrollment 38% to an all-time high of 1,868 students over six years, chaired the student fee committee (securing $400,000-plus annually for student programs), and worked with students and campus leadership to deliver a $7.5M Student Union Building through two student fee referendums, construction, and operation.</li>
-          <li>At KCKCC, a public community college, the division posted Fall 2023 results against its new SEM Plan (headcount up 2.8%, FTE up 1.9%, and new student enrollment up 8.5% year over year), while I directly oversaw Student Activities, a new Basic Needs Center, and the $20M, 254-bed residence hall's opening to full occupancy in year one.</li>
-          <li>Tuition and fee governance ran throughout this work, including service on KU Medical Center's Tuition and Fees Policy Committee; recognized nationally with NASPA Pillar of the Profession, American Council on Education Fellow, and NASPA Board of Directors, Region V.</li>
-        </ul>
-        <div class="tags">
-          <span class="tag">SEM planning</span>
-          <span class="tag">Enrollment growth</span>
-          <span class="tag">Tuition &amp; fee governance</span>
-          <span class="tag">Student governance</span>
-          <span class="tag">Student union &amp; housing capital projects</span>
-        </div>
-      </div>
-      <div class="case-figure">
         <div class="sample-mini">
           <span class="case-label">Reference Document</span>
           <p class="sample-mini-title">WSU Tri-Cities Student Affairs Playbook</p>
           <p>The real divisional playbook from my tenure as Chief Student Affairs &amp; Enrollment Officer.</p>
           <a class="sample-link" href="documents/WSUTC_Student_Affairs_Playbook.pdf" target="_blank" rel="noopener">View PDF ↗</a>
-        </div>
-        <div class="sp-mock">
-          <span class="case-label">Illustrative Sample</span>
-          <div class="sp-shot">
-            <div class="sp-chrome"><span class="sp-dot"></span><span class="sp-dot"></span><span class="sp-dot"></span><span class="sp-url">portal.roselawnu.edu/sites/student-affairs</span></div>
-            <div class="sp-head"><span>Student Affairs Operations Hub</span><em>SharePoint</em></div>
-            <table class="sp-list">
-              <tr><th>Name</th><th>Type</th><th>Modified</th></tr>
-              <tr><td>Functional Area Status Updates</td><td>List</td><td>Weekly</td></tr>
-              <tr><td>New Student Crisis &amp; Escalation Case Log</td><td>List (restricted)</td><td>Aug 2026</td></tr>
-              <tr><td>Enrollment Funnel Dashboard</td><td>Power BI embed</td><td>Daily</td></tr>
-              <tr><td>New-Lead Onboarding Checklists</td><td>Library</td><td>Jul 2026</td></tr>
-            </table>
-          </div>
-          <p class="sp-cap">Mocked SharePoint site, fictional Roselawn University data, illustrating where this operational work actually lives day to day.</p>
         </div>
       </div>
     </div>
@@ -588,12 +576,11 @@
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow">How I Work</p>
-      <h2>Three principles</h2>
+      <h2>Two habits behind all of it</h2>
     </div>
     <div class="principles">
-      <div class="principle"><p>For the student, design for their needs first, then build the process around it.</p></div>
-      <div class="principle"><p>Translate between the room that owns the budget and the room that owns the schema.</p></div>
-      <div class="principle"><p>If I build a tool once, I build it so it still works the tenth time, without me in the room.</p></div>
+      <div class="principle"><p>"For the student, design for their needs first, then build the process around it."</p></div>
+      <div class="principle"><p>"Translate between the room that owns the budget and the room that owns the schema."</p></div>
     </div>
   </div>
 </section>
@@ -623,7 +610,7 @@
   <div class="wrap">
     <div>
       <h2 style="font-size:1.5rem;">Get in touch.</h2>
-      <p style="margin-top:8px;">Open to conversations about data &amp; AI strategy, systems leadership, and strategic planning roles in higher education.</p>
+      <p style="margin-top:8px;">Always up for comparing notes on Colleague and Banner migrations, UAT that people actually finish, and where AI tooling really helps a project office. If you're mid-implementation or about to be, email me.</p>
     </div>
     <div class="cta-row">
       <a class="btn btn-primary" href="mailto:chrismeiers@gmail.com">chrismeiers@gmail.com</a>
