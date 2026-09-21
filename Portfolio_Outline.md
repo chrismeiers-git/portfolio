@@ -57,13 +57,51 @@ Email / LinkedIn CTAs.
 ## Open items to confirm before sending externally
 
 - **Full CV link, blocking:** the Ferrilli resume's black header box has "Portfolio" wired to the live artifact link, but "Full CV" is still a placeholder ("link pending"). Needs a proper view-only ("anyone with the link — Viewer") Google Drive/Docs share link to the actual CV file before it can go in either document.
-- **GitHub Pages move:** portfolio (index.html, samples/, documents/) is synced into `~/Documents/GitHub/portfolio/` on this computer so it can be pushed as GitHub Pages; the actual `git init` / remote / push is Chris's to do.
+- **GitHub Pages move: DONE.** The site is live at https://chrismeiers-git.github.io/portfolio/ and pushes from `~/Documents/GitHub/portfolio/` land on Pages within a minute or two. That folder, not the Drive copy, is what the public sees.
 - PNWU program value: portfolio uses $3.37M in the detailed case study (matching the CV's detailed entry); the executive-level $3.5M figure is used in the resume's Executive Summary and the letter of intent template.
 - Integration count: used "approximately 20" throughout (CV's current figure).
 - GEAR UP / TRIO grant dollar amounts: left unstated everywhere since not confirmed.
-- Resolved (Version 11): the orphaned `strategic-map.html`, `student-affairs-playbook.html`, `governance-charter.html`, and `sem-charter.html` files were deleted from `career/07_portfolio/samples/`. They still exist in `~/Documents/GitHub/portfolio/samples/` until that folder is next synced — delete them there too as part of the next sync/push.
+- Resolved (Version 11, confirmed Version 14): the orphaned `strategic-map.html`, `student-affairs-playbook.html`, `governance-charter.html`, and `sem-charter.html` files are gone from both `career/07_portfolio/samples/` and `~/Documents/GitHub/portfolio/samples/`. Nothing left to clean up.
+- Both WSUTC PDFs in `documents/` ARE linked from Case 3 and Case 4 on the live site. Any note calling them unused is stale (the `web-portfolio` skill still says so, as of Version 14).
 - Em-dashes removed throughout the portfolio copy and the sample HTML pages (replaced with commas, colons, or "·").
 - Chris has already initialized a git repository at `~/Documents/GitHub/portfolio` (with a remote `origin` configured) — the GitHub Pages push itself is his to continue.
+
+## Notes on this edit pass (Version 13 to 14)
+
+Pre-meeting pass on 2026-09-21, ahead of a 10:00 AM follow-up call with Eric Birkelbach, a recruiter at Ferrilli. Ferrilli being the reader is what drove the first item.
+
+**Audience fit (the reason for the pass)**
+
+- Case 1 bullet 2 read: "Negotiated a scope-reduction change order that shifted 1,300 hours of integration work to the implementation partner, protecting the delivery timeline." Ferrilli IS the implementation partner, so to a Ferrilli reader that sentence says "I moved 1,300 hours of unscoped work onto your firm and counted it as a win." Rewritten to "Negotiated a change order that restructured 1,300 hours of integration work and protected the delivery timeline." Same accomplishment, no attribution of the burden. The neutral "three-party delivery model with Ellucian and Ferrilli" mention in the Case 1 opening was left alone; it reads well and shows prior work alongside them.
+- Standing rule going forward: before sending the portfolio link to anyone at Ellucian, Ferrilli, Kuali, Nelnet, or Paylocity, reread every mention of that firm as that reader.
+
+**Repetition a top-to-bottom reader would catch**
+
+- "without me in the room" appeared twice (Featured Work intro and the third How I Work principle). Cut from the intro; the principle keeps it.
+- The "room that owns X" metaphor appeared three times with three different endings: "the room that owns the system" (About), "the room that owns the schema" (How I Work), "only as good as the room that approves them" (Case 3 opener). Three variants of one image reads as generated. Kept the How I Work instance, changed the About line to "the people who own the budget and the people who own the data," and deleted the Case 3 aphorism opener entirely.
+- The KCKCC SEM Plan was described twice in near-identical words (Case 3 bullet 1 and Case 4 bullet 2). Case 3 keeps the process framing; Case 4 now leads with the Fall 2023 results instead.
+
+**AI tells**
+
+- Section h2s ran the same grammatical frame: "Four ways I show up on a project" / "The work behind each one" / "Three habits behind all of it." Matched subhead cadence is a generated-document fingerprint. Now "What I do" / "Four projects in detail" / "Three principles." ("Show up on a project" was also LinkedIn-speak.)
+- Hero tagline was one 62-word sentence ending in a trailing gerund plus tricolon ("and building the AI tooling, governance structures, and strategic plans that carry it"). Split into two sentences; tricolon cut.
+- Featured Work intro used the "started as X and ended as Y" antithesis. Softened to "started as ... and became ..." with the pile-on adjective ("a mess of") dropped.
+- Case 2 opened "A PhD ... runs underneath all of this." Now "All of this sits on a PhD ..."
+- The three How I Work principles were wrapped in quotation marks with no attribution, i.e. Chris quoting himself. Quote marks removed; they stand as plain statements.
+
+**Mechanics**
+
+- Number style normalized to numerals: "25+ years" to "25 years", "twenty-plus years apart" to "20 years apart", both "20-plus stakeholders" to "20+ stakeholders" (matching the stat block).
+- "St. Martin's University" to "Saint Martin's University" (official name), both occurrences.
+- Em dash count re-verified at zero after the pass.
+
+**Not done, deliberately**
+
+- **Dates are still missing from every case study.** A recruiter cannot place the career arc without year ranges on WSU Tri-Cities, KCKCC, KUMC, and PNWU. This is the highest-value remaining addition for a recruiter audience and the one that needs Chris's own source data (`roles_history.md`), so it was left for a pass with more time than the pre-meeting window allowed.
+
+**Sync state**
+
+- Edited directly in `~/Documents/GitHub/portfolio/index.html` and pushed to GitHub Pages. The Drive source of truth at `career/07_portfolio/` is now BEHIND the git clone by this pass. Copy `index.html` and this outline back to Drive to resync.
 
 ## Notes on this edit pass (Version 12 → 13)
 
