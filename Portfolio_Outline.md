@@ -89,10 +89,11 @@ Applied 2026-09-21 ahead of a 10:00 AM follow-up call with Eric Birkelbach, a re
 - "20-plus stakeholders" to "20+ stakeholders" in both places, matching the stat block.
 - Quotation marks removed from the two How I Work principles. They were Chris quoting himself with no attribution, which reads as generated.
 
-**UNRESOLVED, blocking full date coverage**
+**KU Medical Center, resolved**
 
-- **The KU Medical Center tenure contradicts itself.** The page claims "eight years" as co-executive sponsor in three places (Case 1 body, the Case 4 lead paragraph, and the "8 years" stat block), but the dates Chris gave are 2008 to 2014, which is six. No KUMC dates were added and the "eight years" claims were left untouched, rather than publish a visible contradiction. Chris to confirm which is right, then the dates and the count can go in together.
-- **"Two major SIS implementations, twenty-plus years apart" depends on the above.** If the KUMC mandate began in 2008 and PNWU in 2025, the gap is 17 years, not twenty-plus. Left unchanged pending the KUMC answer. If the span is meant to run from UMKC in 2002, twenty-plus is correct and should say so.
+- The page had claimed "eight years" as co-executive sponsor in four places (the About paragraph, the Case 1 body, the Case 4 lead paragraph, and the "8 years" stat block). Chris confirmed the sponsorship ran **2008 to 2014, six years**. All four corrected, and Case 1 now carries the date range explicitly.
+- **The twenty-plus-year span is correct and now has a basis on the page.** Chris started the KUMC PeopleSoft project in **2000, during an earlier tenure there**, so the gap between his first and current SIS implementations really is over two decades. Cases 1 and 4 now say so, and the Capabilities blurb reads "over 20 years apart" rather than "twenty-plus years apart" (numeral style).
+- Still on record but not placed on the page: **UMKC, 2002 to 2004**, during the PeopleSoft project there. Worth adding if a third client-side data point helps; currently unmentioned.
 
 **Concurrency note, worth remembering**
 
