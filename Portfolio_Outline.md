@@ -1,6 +1,7 @@
 # Portfolio Outline — Chris Meiers, PhD
 
-**Live page:** https://claude.ai/code/artifact/70dcd260-15f6-453a-82cf-a94a92e1044b (Version 10)
+**Live page:** https://chrismeiers-git.github.io/portfolio/ (Version 14)
+**Prior artifact version:** https://claude.ai/code/artifact/70dcd260-15f6-453a-82cf-a94a92e1044b (Version 10, superseded)
 **Built:** September 2026, from the career management system in this folder (roles_history.md, achievements_inventory.md, voice_and_style_guide.md).
 
 ---
@@ -57,51 +58,60 @@ Email / LinkedIn CTAs.
 ## Open items to confirm before sending externally
 
 - **Full CV link, blocking:** the Ferrilli resume's black header box has "Portfolio" wired to the live artifact link, but "Full CV" is still a placeholder ("link pending"). Needs a proper view-only ("anyone with the link — Viewer") Google Drive/Docs share link to the actual CV file before it can go in either document.
-- **GitHub Pages move: DONE.** The site is live at https://chrismeiers-git.github.io/portfolio/ and pushes from `~/Documents/GitHub/portfolio/` land on Pages within a minute or two. That folder, not the Drive copy, is what the public sees.
+- **GitHub Pages move:** portfolio (index.html, samples/, documents/) is synced into `~/Documents/GitHub/portfolio/` on this computer so it can be pushed as GitHub Pages; the actual `git init` / remote / push is Chris's to do.
 - PNWU program value: portfolio uses $3.37M in the detailed case study (matching the CV's detailed entry); the executive-level $3.5M figure is used in the resume's Executive Summary and the letter of intent template.
 - Integration count: used "approximately 20" throughout (CV's current figure).
 - GEAR UP / TRIO grant dollar amounts: left unstated everywhere since not confirmed.
-- Resolved (Version 11, confirmed Version 14): the orphaned `strategic-map.html`, `student-affairs-playbook.html`, `governance-charter.html`, and `sem-charter.html` files are gone from both `career/07_portfolio/samples/` and `~/Documents/GitHub/portfolio/samples/`. Nothing left to clean up.
-- Both WSUTC PDFs in `documents/` ARE linked from Case 3 and Case 4 on the live site. Any note calling them unused is stale (the `web-portfolio` skill still says so, as of Version 14).
+- Resolved (Version 11): the orphaned `strategic-map.html`, `student-affairs-playbook.html`, `governance-charter.html`, and `sem-charter.html` files were deleted from `career/07_portfolio/samples/`. They still exist in `~/Documents/GitHub/portfolio/samples/` until that folder is next synced — delete them there too as part of the next sync/push.
 - Em-dashes removed throughout the portfolio copy and the sample HTML pages (replaced with commas, colons, or "·").
 - Chris has already initialized a git repository at `~/Documents/GitHub/portfolio` (with a remote `origin` configured) — the GitHub Pages push itself is his to continue.
 
-## Notes on this edit pass (Version 13 to 14)
+## Notes on this edit pass (Version 13 -> 14): tech-forward reweight
 
-Pre-meeting pass on 2026-09-21, ahead of a 10:00 AM follow-up call with Eric Birkelbach, a recruiter at Ferrilli. Ferrilli being the reader is what drove the first item.
+Driven by a four-expert panel review (implementation-partner exec, executive brand strategist, higher-ed CIO / EdTech product leader, LinkedIn/B2B strategist). Goal set by Chris: technology reads as the primary interest, vendor side or client side, without saying so; custom AI-built project management tooling becomes the hook; Ferrilli-tuned now, LinkedIn generalization pass still to come.
 
-**Audience fit (the reason for the pass)**
+**Hero**
+- Eyebrow changed from "Portfolio · Higher Education Executive Leadership" to "Portfolio · Higher Education ERP & SIS Modernization". All four panelists flagged the old eyebrow as the single highest-harm element: it files him as a student affairs administrator before the H1 loads.
+- Tagline rewritten to lead with the program and the tooling ("Nobody sells project management tooling shaped like that program. So I built it, on the licenses the university already owns."). A second, smaller line carries the student affairs depth as the differentiator rather than the identity.
+- Chips: added "Ellucian Colleague · PeopleSoft SIS · Ethos"; split ACE Fellow onto its own chip and removed NASPA Pillar of the Profession from the hero (it still appears in the Case 4 body). Rationale: one prestige credential in the hero reads as pedigree, two student affairs honors read as identity.
 
-- Case 1 bullet 2 read: "Negotiated a scope-reduction change order that shifted 1,300 hours of integration work to the implementation partner, protecting the delivery timeline." Ferrilli IS the implementation partner, so to a Ferrilli reader that sentence says "I moved 1,300 hours of unscoped work onto your firm and counted it as a win." Rewritten to "Negotiated a change order that restructured 1,300 hours of integration work and protected the delivery timeline." Same accomplishment, no attribution of the burden. The neutral "three-party delivery model with Ellucian and Ferrilli" mention in the Case 1 opening was left alone; it reads well and shows prior work alongside them.
-- Standing rule going forward: before sending the portfolio link to anyone at Ellucian, Ferrilli, Kuali, Nelnet, or Paylocity, reread every mention of that firm as that reader.
+**About** rewritten to lead with the systems through-line (PeopleSoft sponsorship -> running the offices inside those systems -> directing the replacement) instead of the nine-function inventory. Kept the six-institution breadth but attached a reason to it.
 
-**Repetition a top-to-bottom reader would catch**
+**Capabilities**: heading changed to "What I actually do on a program". Pillars reordered and relabeled:
+1. ERP & SIS Program Delivery (was #2)
+2. AI-Built Project & Program Tooling (split out of the old #1, narrowed to tooling)
+3. Data, Measurement & Institutional Research (rest of the old #1)
+4. Governance, Sponsorship & Operational Depth (old #3 and #4 merged)
 
-- "without me in the room" appeared twice (Featured Work intro and the third How I Work principle). Cut from the intro; the principle keeps it.
-- The "room that owns X" metaphor appeared three times with three different endings: "the room that owns the system" (About), "the room that owns the schema" (How I Work), "only as good as the room that approves them" (Case 3 opener). Three variants of one image reads as generated. Kept the How I Work instance, changed the About line to "the people who own the budget and the people who own the data," and deleted the Case 3 aphorism opener entirely.
-- The KCKCC SEM Plan was described twice in near-identical words (Case 3 bullet 1 and Case 4 bullet 2). Case 3 keeps the process framing; Case 4 now leads with the Fall 2023 results instead.
+**Featured Work**: heading changed to "Four programs, and what I built inside them". Still four cases, reordered and rebuilt:
+1. *Ellucian Colleague SIS Modernization, $3.37M, Five Years*. The 1,300-hour change order and the Paylocity-to-LDAP catch were pulled out of a run-on bullet and given their own lead bullets (the CIO panelist called these the two most credible items on the page and both were buried). Stat block changed from 75/381 to **1,300** hours moved to the implementation partner and **20** institutional systems, since 75/381 moved to the tooling case where they are evidence of a tool rather than of volume.
+2. *The Project Management Tooling I Built Inside the Tenant* (NEW). Four mechanism-level bullets: UAT plan generation and tracking (75 plans, 381 steps), the Integration Master, the entry-grid generator, the Decision Registry. Stat block: **$0** new licensing spend and **1,600+** records converted. Keeps the Decision Registry sample and the LD 810 live tool. The old "If I build a tool once..." habit line was folded in as the closing sentence, where it has evidence attached.
+3. *Benchmarking, Reporting & Doctoral Statistics*. The remainder of the old Case 2. Stat block: **5,800** IPEDS institutions, **Since 2011** teaching.
+4. *Executive Sponsorship, Board-Approved Plans & Enrollment Operations*. Old Cases 3 and 4 merged into one credibility card, led by the eight years co-sponsoring PeopleSoft SIS at KU Medical Center rather than by the enrollment numbers. Stat block: **8 years** sponsorship, **< 1 year** to a Board-approved SEM Plan. Carries all three real reference PDFs.
 
-**AI tells**
+**Removed**
+- The word "agentic" everywhere on index.html (0 occurrences now). The CIO panelist's verdict: in 2026 it is vendor discourse and it costs credibility with the exact reader Chris wants. Note: `samples/decision-registry.html` still contains 2 instances, not yet changed.
+- Both mocked Roselawn SharePoint boxes (governance and student affairs). They diluted three real PDFs in what is now a credibility card. The `.sp-mock` CSS is left in place so they can be restored.
+- The "6 governance decisions" stat, which read small next to 381 and 1,600+.
+- The third "How I Work" habit (moved into the tooling case). Heading is now "Two habits behind all of it".
 
-- Section h2s ran the same grammatical frame: "Four ways I show up on a project" / "The work behind each one" / "Three habits behind all of it." Matched subhead cadence is a generated-document fingerprint. Now "What I do" / "Four projects in detail" / "Three principles." ("Show up on a project" was also LinkedIn-speak.)
-- Hero tagline was one 62-word sentence ending in a trailing gerund plus tricolon ("and building the AI tooling, governance structures, and strategic plans that carry it"). Split into two sentences; tricolon cut.
-- Featured Work intro used the "started as X and ended as Y" antithesis. Softened to "started as ... and became ..." with the pile-on adjective ("a mess of") dropped.
-- Case 2 opened "A PhD ... runs underneath all of this." Now "All of this sits on a PhD ..."
-- The three How I Work principles were wrapped in quotation marks with no attribution, i.e. Chris quoting himself. Quote marks removed; they stand as plain statements.
+**Contact** line changed from "Open to conversations about ... roles in higher education" (which read as job-seeking and made technology sound like a phase) to an invitation to compare notes on Colleague and Banner migrations, UAT, and AI tooling in a project office.
 
-**Mechanics**
+**Bug fix (pre-existing)**: the hero chips had `white-space:nowrap` with no mobile override, so the page scrolled horizontally at 390px (scrollWidth 516). Added a `max-width: 640px` media query letting chips wrap. Verified: scrollWidth now equals viewport width, no overflowing elements.
 
-- Number style normalized to numerals: "25+ years" to "25 years", "twenty-plus years apart" to "20 years apart", both "20-plus stakeholders" to "20+ stakeholders" (matching the stat block).
-- "St. Martin's University" to "Saint Martin's University" (official name), both occurrences.
-- Em dash count re-verified at zero after the pass.
+**Verification run**: tag balance checked (div/section/ul/li/p/h3 all matched), 0 em dashes, all 14 hrefs resolve, all linked local files present, rendered at 1280px light, 1280px dark, and 390px mobile.
 
-**Not done, deliberately**
+**Backup**: `index.html.bak-20260921-1243` in this folder, pre-edit state.
 
-- **Dates are still missing from every case study.** A recruiter cannot place the career arc without year ranges on WSU Tri-Cities, KCKCC, KUMC, and PNWU. This is the highest-value remaining addition for a recruiter audience and the one that needs Chris's own source data (`roles_history.md`), so it was left for a pass with more time than the pre-meeting window allowed.
-
-**Sync state**
-
-- Edited directly in `~/Documents/GitHub/portfolio/index.html` and pushed to GitHub Pages. The Drive source of truth at `career/07_portfolio/` is now BEHIND the git clone by this pass. Copy `index.html` and this outline back to Drive to resync.
+### Open items from the panel, not yet actioned
+- **Facts Chris needs to supply** before these lines are fully load-bearing: what the Integration Master actually holds field by field and which recurring meeting works from it; what the entry-grid generator consumes and how much manual build it replaced; whether the Decision Registry is queried by the implementation partner or internal only; who else can maintain these tools when he is not there. The current bullets are written at the level of what is already documented and confirmed.
+- **The "roughly 20 institutional systems" number** reads as rounded. If there is a real integration inventory count, use the exact number.
+- **75 UAT plans is output volume, not outcome.** One defect-found or cycle-time number would turn it.
+- **What a technical reader wants to click and cannot**: a redacted-real screenshot of the Integration Master or UAT tracker with callouts, rather than another fully fictional sample page. Cheaper alternative: publish the UAT validation plan template itself, filled with Roselawn data, as a downloadable artifact.
+- **Multi-client capacity** is the gap an implementation firm will probe: one institution, one implementation, no utilization target. Nothing on the page speaks to running concurrent engagements.
+- **"Fictional data" labels**: one panelist wanted these reworded to "sanitized". Not changed, because the data genuinely is invented and the current wording is the honest one. Flagging only.
+- `samples/decision-registry.html` still says "agentic" twice and its linked title on index.html is now "Governance Decision Registry"; the sample page's own heading has not been updated to match.
+- The LinkedIn generalization pass (removing the Ferrilli-weighted framing) is still to do before the post goes out.
 
 ## Notes on this edit pass (Version 12 → 13)
 
